@@ -3,38 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thifany Sá Estética Avançada - Transforme Sua Saúde e Autoestima</title>
-    <meta name="description" content="Biomédica Esteta especializada em tratamentos faciais, corporais e reposição vitamínica. Resultados comprovados em Luís Eduardo Magalhães, BA.">
+    <title>Thifany Sá Estética Avançada | Transforme Sua Saúde e Autoestima</title>
+    <meta name="description" content="Biomédica Esteta especializada em reposição vitamínica injetável, limpeza de pele profunda e tratamentos estéticos avançados. Resultados comprovados em Luís Eduardo Magalhães, BA.">
+    <meta name="keywords" content="estética, biomédica, vitaminas injetáveis, limpeza de pele, microagulhamento, Luís Eduardo Magalhães">
+    <meta name="author" content="Thifany Sá">
     
-    <!-- Facebook Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'SEU_PIXEL_ID');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
-    /></noscript>
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Thifany Sá Estética Avançada">
+    <meta property="og:description" content="Transforme sua saúde e autoestima com tratamentos estéticos profissionais">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/daa5a5/ffffff?text=Thifany+Sá+Estética">
     
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
-    </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="logo.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 
 
     <style>
+        /* ===== CSS RESET & BASE STYLES ===== */
         * {
             margin: 0;
             padding: 0;
@@ -43,16 +37,322 @@
 
 
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            overflow-x: hidden;
+        :root {
+            /* Color Palette - Sophisticated & Professional */
+            --primary-color: #8b4d4d;
+            --primary-light: #a85f5f;
+            --primary-dark: #6b3838;
+            --secondary-color: #daa5a5;
+            --secondary-light: #f4e4e4;
+            --accent-color: #c17b7b;
+            
+            /* Neutral Colors */
+            --white: #ffffff;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            
+            /* Success & Status Colors */
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --error-color: #ef4444;
+            --info-color: #3b82f6;
+            
+            /* Typography */
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
+            
+            /* Spacing Scale */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-2xl: 4rem;
+            --space-3xl: 6rem;
+            
+            /* Border Radius */
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            --radius-2xl: 1.5rem;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            
+            /* Transitions */
+            --transition-fast: 0.15s ease-in-out;
+            --transition-base: 0.3s ease-in-out;
+            --transition-slow: 0.5s ease-in-out;
+            
+            /* Z-index Scale */
+            --z-dropdown: 1000;
+            --z-sticky: 1020;
+            --z-fixed: 1030;
+            --z-modal: 1040;
+            --z-tooltip: 1070;
         }
 
 
 
-        /* Animações Avançadas */
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+
+
+        body {
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--gray-700);
+            background-color: var(--white);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+
+
+        /* ===== UTILITY CLASSES ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+
+
+        .container-wide {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+
+
+        .section-padding {
+            padding: var(--space-3xl) 0;
+        }
+
+
+
+        .text-center {
+            text-align: center;
+        }
+
+
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+
+
+        /* ===== TYPOGRAPHY ===== */
+        .heading-display {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.025em;
+            color: var(--gray-900);
+        }
+
+
+
+        .heading-xl {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: var(--space-md);
+        }
+
+
+
+        .heading-lg {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: var(--space-md);
+        }
+
+
+
+        .heading-md {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: var(--space-sm);
+        }
+
+
+
+        .heading-sm {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+        }
+
+
+
+        .text-lg {
+            font-size: 1.125rem;
+            line-height: 1.7;
+        }
+
+
+
+        .text-muted {
+            color: var(--gray-500);
+        }
+
+       /* ====== CARROSSEL APRIMORADO (ajuste de proporção e cover) ====== */
+        .carousel-container {
+        position: relative;
+        width: 100%;
+        max-width: 850px;
+        margin: 60px auto;
+        overflow: hidden;
+        border-radius: 18px;
+        background: #fff;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 600px; /* altura fixa confortável */
+        }
+
+        .carousel-track {
+        display: flex;
+        transition: transform 0.6s ease;
+        align-items: center;
+        height: 100%;
+        }
+
+        .carousel-slide {
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .carousel-slide img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain; /* mostra toda a imagem sem cortar */
+        border-radius: 18px;
+        display: block;
+        }
+
+        .carousel-slide.active img {
+        transform: scale(1.02); /* leve efeito de movimento */
+        opacity: 1;
+        }
+
+        /* Botões laterais */
+        .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: var(--primary-color, #8b4d4d);
+        color: #fff;
+        border: none;
+        padding: 12px 16px;
+        cursor: pointer;
+        border-radius: 50%;
+        font-size: 1.3rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        z-index: 10;
+        }
+
+        .carousel-button:hover {
+        background: var(--primary-dark, #6b3535);
+        transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-button.prev {
+        left: 15px;
+        }
+        .carousel-button.next {
+        right: 15px;
+        }
+
+        /* Indicadores (dots) */
+        .carousel-indicators {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+        }
+
+        .indicator-dot {
+        width: 9px;
+        height: 9px;
+        background-color: rgba(139, 77, 77, 0.3);
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        }
+
+        .indicator-dot.active {
+        background-color: var(--primary-color, #8b4d4d);
+        transform: scale(1.4);
+        }
+
+        /* Animação de entrada */
+        @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(25px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+        .carousel-container {
+            max-width: 95%;
+            margin: 40px auto;
+            border-radius: 12px;
+            aspect-ratio: 4 / 5; /* formato mais alto no celular */
+        }
+
+        .carousel-slide img {
+            border-radius: 12px;
+        }
+
+        .carousel-button {
+            padding: 10px 12px;
+            font-size: 1.1rem;
+        }
+        }
+
+
+
+        /* ===== ANIMATIONS ===== */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -66,96 +366,380 @@
 
 
 
-        @keyframes pulseGlow {
-            0%, 100% {
-                box-shadow: 0 0 20px rgba(218, 165, 165, 0.6);
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
                 transform: scale(1);
             }
+        }
+
+
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
             50% {
-                box-shadow: 0 0 30px rgba(218, 165, 165, 0.9);
-                transform: scale(1.02);
+                transform: translateY(-10px);
             }
         }
 
 
 
-        @keyframes floatAnimation {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
         }
 
 
 
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        @keyframes shimmer {
+            0% {
+                background-position: -200px 0;
+            }
+            100% {
+                background-position: calc(200px + 100%) 0;
+            }
         }
 
 
 
-        /* Header */
+        /* Animation Classes */
+        .animate-fade-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+
+
+        .animate-fade-left {
+            animation: fadeInLeft 0.8s ease-out forwards;
+        }
+
+
+
+        .animate-fade-right {
+            animation: fadeInRight 0.8s ease-out forwards;
+        }
+
+
+
+        .animate-scale-in {
+            animation: scaleIn 0.6s ease-out forwards;
+        }
+
+
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+
+
+        .animate-pulse {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+
+
+        /* Intersection Observer Animation States */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+
+
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+
+        /* ===== HEADER & NAVIGATION ===== */
         .header {
-            background: linear-gradient(-45deg, #daa5a5, #f4e4e4, #e8c5c5, #f0d0d0);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
-            padding: 1rem 0;
             position: fixed;
-            width: 100%;
             top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
+            left: 0;
+            right: 0;
+            z-index: var(--z-fixed);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all var(--transition-base);
+        }
+
+
+
+        .header.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-md);
         }
 
 
 
         .nav {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            justify-content: space-between;
+            padding: var(--space-sm) 0;
         }
 
 
 
         .logo {
-            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem; /* diminui o espaço entre o ícone e o texto */
+            font-family: var(--font-display);
+            font-size: 1.5rem;
             font-weight: 700;
-            color: #8b4d4d;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: transform var(--transition-base);
         }
 
 
 
-        .cta-header {
-            background: linear-gradient(135deg, #8b4d4d, #a85f5f);
-            color: white;
-            padding: 0.8rem 2rem;
-            border: none;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            animation: pulseGlow 3s infinite;
+        .logo:hover {
+            transform: scale(1.05);
         }
 
 
 
-        .cta-header:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(139, 77, 77, 0.3);
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
         }
 
 
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, rgba(218, 165, 165, 0.1), rgba(240, 208, 208, 0.1));
-            padding: 120px 0 80px;
-            text-align: center;
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: var(--space-lg);
+            margin: 0;
+        }
+
+
+
+        .nav-link {
             position: relative;
+            color: var(--gray-600);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color var(--transition-base);
+        }
+
+
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-color);
+        }
+
+
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width var(--transition-base);
+        }
+
+
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: var(--white);
+            padding: var(--space-xs) var(--space-md);
+            border: none;
+            border-radius: var(--radius-xl);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--transition-base);
+            box-shadow: var(--shadow-md);
+        }
+
+
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* ===== HEADER LINKS ESTILO PROFISSIONAL ===== */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  position: relative;
+  font-weight: 500;
+  color: var(--gray-700);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  padding-bottom: 4px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-color);
+}
+
+/* Linha animada elegante sob o link */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s ease-in-out;
+  border-radius: 2px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Ajuste automático do espaçamento para telas menores */
+@media (max-width: 1200px) {
+  .nav-links {
+    gap: 1.25rem;
+  }
+  .nav-link {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+        /* Mobile Navigation */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--gray-600);
+            cursor: pointer;
+        }
+
+
+
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            border-top: 1px solid var(--gray-200);
+            box-shadow: var(--shadow-lg);
+            padding: var(--space-md);
+        }
+
+
+
+        .mobile-nav.active {
+            display: block;
+            animation: fadeInUp 0.3s ease-out;
+        }
+
+
+
+        .mobile-nav-links {
+            list-style: none;
+            margin: 0;
+        }
+
+
+
+        .mobile-nav-links li {
+            margin-bottom: var(--space-sm);
+        }
+
+
+
+        .mobile-nav-links .nav-link {
+            display: block;
+            padding: var(--space-xs) 0;
+            font-size: 1.1rem;
+        }
+
+
+
+/* ===== HERO SECTION ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, 
+                rgba(218, 165, 165, 0.1) 0%, 
+                rgba(244, 228, 228, 0.1) 50%, 
+                rgba(255, 255, 255, 0.1) 100%);
             overflow: hidden;
         }
 
@@ -164,801 +748,1683 @@
         .hero::before {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(218, 165, 165, 0.1) 0%, transparent 70%);
-            animation: floatAnimation 6s ease-in-out infinite;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23daa5a5' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+            z-index: 1;
         }
 
 
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+        .hero-content {
             position: relative;
             z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-3xl);
+            align-items: center;
         }
 
 
 
-        .hero h1 {
-            font-size: 3.5rem;
+        .hero-text {
+            max-width: 600px;
+        }
+
+
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            background: rgba(139, 77, 77, 0.1);
+            color: var(--primary-color);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: var(--radius-xl);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+            border: 1px solid rgba(139, 77, 77, 0.2);
+        }
+
+
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 700;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #8b4d4d, #a85f5f);
+            line-height: 1.1;
+            color: var(--gray-900);
+            margin-bottom: var(--space-md);
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: fadeInUp 1s ease;
         }
 
 
 
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            color: #666;
-            animation: fadeInUp 1s ease 0.2s both;
+        .hero-subtitle {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: var(--gray-600);
+            margin-bottom: var(--space-xl);
         }
 
 
 
-        .credentials {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 1rem 2rem;
-            border-radius: 15px;
-            display: inline-block;
-            margin: 2rem 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            animation: fadeInUp 1s ease 0.4s both;
-        }
-
-
-
-        /* Video Section */
-        .video-section {
-            padding: 80px 0;
-            background: #f8f8f8;
-        }
-
-
-
-        .video-container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            animation: fadeInUp 1s ease;
-        }
-
-
-
-        .video-placeholder {
-            background: #000;
-            border-radius: 20px;
-            aspect-ratio: 16/9;
+        .hero-cta-group {
             display: flex;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+        }
+
+
+
+        .btn {
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
+            gap: var(--space-xs);
+            padding: var(--space-md) var(--space-xl);
+            border: none;
+            border-radius: var(--radius-xl);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--transition-base);
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1rem;
             position: relative;
             overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.3s ease;
         }
 
 
 
-        .video-placeholder:hover {
-            transform: scale(1.02);
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: var(--white);
+            box-shadow: var(--shadow-md);
         }
 
 
 
-        .play-button {
-            width: 80px;
-            height: 80px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 50%;
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+
+
+        .hero-image {
+            position: relative;
             display: flex;
-            align-items: center;
             justify-content: center;
-            position: absolute;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            animation: pulseGlow 2s infinite;
+            align-items: center;
         }
 
 
 
-        .play-button:hover {
-            transform: scale(1.1);
+        .hero-image-wrapper {
+        position: relative;
+        width: 420px;
+        height: 520px;
+        border-radius: 24px;
+        overflow: visible; /* ← muda de hidden para visible */
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+        background: #fff;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        z-index: 2; /* garante que fique sobre o container pai */
+        }
+
+        .hero-main-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;           /* Preenche o espaço mantendo proporção */
+        object-position: center 15%; /* Mostra mais da parte de cima */
+        transform: scale(1.05);      /* Leve zoom para preencher melhor */
+        border-radius: 24px;
+        filter: brightness(0.97);
+        transition: transform 0.6s ease, filter 0.4s ease;
+        }
+
+        .hero-main-image:hover {
+        transform: scale(1.08);
+        filter: brightness(1);
+        }
+
+        .floating-card {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(6px);
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        padding: 12px 16px;
+        transition: transform 0.4s ease, opacity 0.4s ease;
+        opacity: 1;
+        z-index: 3; /* ← evita que sejam cortados */
         }
 
 
 
-        .play-button::after {
-            content: '';
-            width: 0;
-            height: 0;
-            border-left: 20px solid #8b4d4d;
-            border-top: 12px solid transparent;
-            border-bottom: 12px solid transparent;
-            margin-left: 5px;
+        .floating-card-1 {
+            top: 8px; /* antes era 50px, reduzido para subir */
+            right: -20px; /* levemente ajustado para alinhar melhor */
+            animation: float 3s ease-in-out infinite;
         }
 
 
 
-        /* Services Section */
+        .floating-card-2 {
+            bottom: 80px;
+            left: -30px;
+            animation: float 3s ease-in-out infinite 1.5s;
+        }
+
+
+
+        .floating-card h4 {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: var(--space-xs);
+        }
+
+
+
+        .floating-card p {
+            font-size: 0.75rem;
+            color: var(--gray-600);
+            margin: 0;
+        }
+
+
+
+        .hero-stats {
+            display: flex;
+            gap: var(--space-xl);
+            margin-top: var(--space-xl);
+        }
+
+
+
+        .stat-item {
+            text-align: center;
+        }
+
+
+
+        .stat-number {
+            display: block;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            font-family: var(--font-display);
+        }
+
+
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--gray-500);
+            font-weight: 500;
+        }
+
+
+
+        /* ===== SERVICES SECTION ===== */
         .services {
-            padding: 80px 0;
-            background: white;
+            background: var(--gray-50);
+        }
+
+
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto var(--space-3xl);
+        }
+
+
+
+        .section-badge {
+            display: inline-block;
+            background: rgba(139, 77, 77, 0.1);
+            color: var(--primary-color);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: var(--radius-xl);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: var(--space-md);
         }
 
 
 
         .section-title {
-            text-align: center;
-            font-size: 2.8rem;
-            margin-bottom: 3rem;
-            color: #8b4d4d;
-            animation: fadeInUp 1s ease;
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: var(--space-md);
+        }
+
+
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            line-height: 1.6;
         }
 
 
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
-            margin-top: 3rem;
+            justify-content: center;
+            max-width: 1500px; /* Mantém largura confortável e centralizada */
+            margin: 0 auto;
+            align-items: stretch;  /* 👈 garante mesma altura */
         }
 
 
 
         .service-card {
-            background: linear-gradient(135deg, rgba(218, 165, 165, 0.1), rgba(240, 208, 208, 0.1));
-            padding: 2rem;
-            border-radius: 20px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(218, 165, 165, 0.2);
-            animation: fadeInUp 1s ease;
+            background: var(--white);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+            position: relative;
+            overflow: hidden;
+            max-width: 340px; /* Deixa os cards mais largos */
+            margin: 0 auto;
+            padding: 2rem 1.75rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;  /* 👈 força todos os cards a preencherem igualmente */
+
+        }
+
+
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
         }
 
 
 
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
         }
 
 
 
         .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            display: block;
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: var(--white);
+            margin-bottom: 1.25rem;
         }
 
 
 
-        .service-card h3 {
-            color: #8b4d4d;
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
+        .service-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: var(--space-sm);
         }
 
 
 
-        /* Testimonials */
+        .service-description {
+            color: var(--gray-600);
+            line-height: 1.6;
+            margin-bottom: var(--space-md);
+        }
+
+
+
+        .service-features {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            margin-bottom: var(--space-xs);
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+
+
+
+        .service-features li::before {
+            content: '✓';
+            color: var(--success-color);
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+
+
+        /* ===== TESTIMONIALS SECTION ===== */
         .testimonials {
-            padding: 80px 0;
-            background: #f8f8f8;
+            background: var(--white);
         }
 
 
 
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: var(--space-xl);
         }
 
 
 
         .testimonial-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            animation: fadeInUp 1s ease;
+            background: var(--gray-50);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-xl);
+            position: relative;
+            transition: all var(--transition-base);
         }
 
 
 
         .testimonial-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
         }
 
 
 
-        .stars {
-            color: #ffd700;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-
-
-
-        .testimonial-text {
+        .testimonial-quote {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            color: var(--gray-700);
+            margin-bottom: var(--space-md);
             font-style: italic;
-            margin-bottom: 1rem;
-            color: #666;
         }
 
 
 
         .testimonial-author {
-            font-weight: 600;
-            color: #8b4d4d;
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
         }
 
 
 
-        /* CTA Section */
-        .cta-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #8b4d4d, #a85f5f);
-            color: white;
-            text-align: center;
-        }
-
-
-
-        .cta-button {
-            background: white;
-            color: #8b4d4d;
-            padding: 1.2rem 3rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin: 2rem 1rem;
-            display: inline-block;
-            text-decoration: none;
-            animation: pulseGlow 3s infinite;
-        }
-
-
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-        }
-
-
-
-        /* Footer */
-        .footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
-
-
-
-        /* Responsivo */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .nav {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .services-grid,
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-
-
-        /* Elementos de Loading */
-        .loading-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(139, 77, 77, 0.9);
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
+            color: var(--white);
+            font-weight: 700;
         }
 
 
 
-        .spinner {
-            width: 50px;
-            height: 50px;
-            border: 5px solid rgba(255,255,255,0.3);
-            border-top: 5px solid white;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
+        .testimonial-info h4 {
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 2px;
         }
 
-         .hero-stats {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 2rem;
-                margin: 3rem 0;
-                max-width: 600px;
-                margin-left: auto;
-                margin-right: auto;
+
+
+        .testimonial-info p {
+            font-size: 0.875rem;
+            color: var(--gray-500);
+            margin: 0;
+        }
+
+
+
+        /* Substitua o bloco existente por este */
+        .testimonial-rating {
+            display: flex;
+            gap: 3px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+            position: relative; /* antes era absolute */
+            top: auto;
+            right: auto;
+            justify-content: flex-end; /* ou center, se quiser centralizar */
+        }
+
+        .star {
+            color: #fbbf24;
+            font-size: 1rem;
+        }
+
+        .results-container {
+            display: grid;
+            /* Para desktop: 2 colunas */
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .social-proof-combo-card {
+            background-color: var(--color-light); /* Cor de fundo clara, como no seu template */
+            border-radius: var(--radius-lg);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            display: flex; /* Usamos flexbox para alinhar o antes/depois e o print */
+            flex-direction: column; /* Em telas menores, ficam um abaixo do outro */
+            overflow: hidden;
+        }
+
+        .result-images, 
+        .result-text-proof {
+            flex: 1; /* Permite que ambos ocupem espaço igual */
+            margin-bottom: 20px;
+        }
+
+        .combo-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-md);
+            object-fit: cover;
+            display: block;
+        }
+
+        .result-images {
+            /* Estilo para a foto de Antes e Depois */
+            border: 3px solid var(--color-primary); /* Destaque com a cor primária */
+        }
+
+        .proof-author {
+            margin-top: 10px;
+            text-align: right;
+            padding-right: 10px;
+            border-top: 1px solid var(--color-border);
+        }
+
+        /* Para Telas Maiores (Desktop) */
+        @media (min-width: 768px) {
+            .social-proof-combo-card {
+                flex-direction: row; /* Lado a lado em telas maiores */
+                gap: 20px;
             }
-            .stat-item {
-                text-align: center;
-                background: rgba(255, 255, 255, 0.9);
-                padding: 1.5rem;
-                border-radius: 15px;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+
+
+        /* ===== ABOUT SECTION ===== */
+        .about {
+            background: var(--gray-50);
+        }
+
+
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-3xl);
+            align-items: center;
+        }
+
+
+
+        .about-text {
+            max-width: 600px;
+        }
+
+
+
+        .about-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+
+
+        .about-image-wrapper {
+            position: relative;
+            width: 350px;
+            height: 450px;
+            border-radius: var(--radius-2xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+
+
+
+        .about-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+
+        .credentials-badge {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: var(--white);
+            padding: var(--space-md);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            backdrop-filter: blur(10px);
+        }
+
+
+
+        .credentials-badge h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: var(--space-xs);
+        }
+
+
+
+        .credentials-badge p {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            margin: 0;
+        }
+
+
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-md);
+            margin-top: var(--space-xl);
+        }
+
+
+
+        .about-feature {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-md);
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+        }
+
+
+
+        .about-feature-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1rem;
+        }
+
+
+
+        .about-feature-text {
+            flex: 1;
+        }
+
+
+
+        .about-feature-text h4 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 2px;
+        }
+
+
+
+        .about-feature-text p {
+            font-size: 0.75rem;
+            color: var(--gray-600);
+            margin: 0;
+        }
+
+
+
+        /* ===== CONTACT SECTION ===== */
+        .contact {
+            background: var(--white);
+        }
+
+
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-3xl);
+            align-items: start;
+        }
+
+
+
+        .contact-info {
+            background: var(--gray-50);
+            padding: var(--space-xl);
+            border-radius: var(--radius-2xl);
+            height: fit-content;
+        }
+
+
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-xl);
+            padding: var(--space-md);
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-base);
+        }
+
+
+
+        .contact-item:hover {
+            transform: translateX(4px);
+            box-shadow: var(--shadow-md);
+        }
+
+
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.25rem;
+        }
+
+
+
+        .contact-details h4 {
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: var(--space-xs);
+        }
+
+
+
+        .contact-details p {
+            color: var(--gray-600);
+            margin: 0;
+        }
+
+
+
+        .contact-form {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-lg);
+        }
+
+
+
+        .form-group {
+            margin-bottom: var(--space-md);
+        }
+
+
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin-bottom: var(--space-xs);
+        }
+
+
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: var(--space-md);
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all var(--transition-base);
+            background: var(--gray-50);
+        }
+
+
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background: var(--white);
+            box-shadow: 0 0 0 3px rgba(139, 77, 77, 0.1);
+        }
+
+
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+
+
+        .form-submit {
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: var(--white);
+            border: none;
+            padding: var(--space-md) var(--space-xl);
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all var(--transition-base);
+            margin-top: var(--space-md);
+        }
+
+
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+
+
+        .form-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+
+
+        /* Form Validation States */
+        .form-input.error,
+        .form-select.error,
+        .form-textarea.error {
+            border-color: var(--error-color);
+            background: rgba(239, 68, 68, 0.05);
+        }
+
+
+
+        .form-input.success,
+        .form-select.success,
+        .form-textarea.success {
+            border-color: var(--success-color);
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+
+
+        .error-message {
+            color: var(--error-color);
+            font-size: 0.875rem;
+            margin-top: var(--space-xs);
+            display: none;
+        }
+
+
+
+        .error-message.show {
+            display: block;
+        }
+
+
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--gray-900);
+            color: var(--gray-300);
+            padding: var(--space-3xl) 0 var(--space-xl);
+        }
+
+
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-xl);
+            margin-bottom: var(--space-xl);
+        }
+
+
+
+        .footer-section h3 {
+            color: var(--white);
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+        }
+
+
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--gray-400);
+            text-decoration: none;
+            line-height: 1.6;
+            transition: color var(--transition-base);
+        }
+
+
+
+        .footer-section a:hover {
+            color: var(--primary-light);
+        }
+
+
+
+        .footer-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        .footer-links li {
+            margin-bottom: var(--space-xs);
+        }
+
+
+
+        .social-links {
+            display: flex;
+            gap: var(--space-md);
+            margin-top: var(--space-md);
+        }
+
+
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--gray-800);
+            border-radius: var(--radius-lg);
+            color: var(--gray-400);
+            text-decoration: none;
+            transition: all var(--transition-base);
+        }
+
+
+
+        .social-link:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+
+
+        .footer-bottom {
+            border-top: 1px solid var(--gray-800);
+            padding-top: var(--space-md);
+            text-align: center;
+            color: var(--gray-500);
+            font-size: 0.875rem;
+        }
+
+
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1024px) {
+            .hero-content,
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: var(--space-xl);
             }
-            .stat-number {
-                display: block;
-                font-size: 2.5rem;
-                font-weight: 700;
-                color: #8b4d4d;
-                margin-bottom: 0.5rem;
-            }
-            .stat-label {
-                font-size: 0.9rem;
-                color: #666;
-                font-weight: 500;
-            }
-            .problem-section {
-                padding: 80px 0;
-                background: linear-gradient(135deg, rgba(255, 0, 0, 0.05), rgba(255, 100, 100, 0.05));
-            }
 
-            .problems-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                gap: 2rem;
-                margin: 3rem 0;
-            }
-            .problem-card {
-                background: white;
-                padding: 2rem;
-                border-radius: 20px;
-                text-align: center;
-                box-shadow: 0 10px 30px rgba(255, 0, 0, 0.1);
-                border-left: 4px solid #ff6b6b;
-                transition: transform 0.3s ease;
+
+
+            .hero-image,
+            .about-image {
+                order: -1;
             }
 
 
 
-            .problem-card:hover {
-                transform: translateY(-5px);
-            }
-
-
-
-            .problem-icon {
-                font-size: 3rem;
-                margin-bottom: 1rem;
-            }
-
-
-
-            .revelation-box {
-                background: linear-gradient(135deg, #8b4d4d, #a85f5f);
-                color: white;
-                padding: 2rem;
-                border-radius: 20px;
-                text-align: center;
-                margin-top: 3rem;
-                box-shadow: 0 15px 35px rgba(139, 77, 77, 0.3);
-            }
-
-
-
-            .service-benefits {
-                margin-top: 1rem;
-            }
-
-
-
-            .benefit {
-                display: block;
-                margin: 0.5rem 0;
-                color: #8b4d4d;
-                font-weight: 500;
-            }
-
-
-
-            .results-section {
-                padding: 80px 0;
-                background: white;
-            }
-
-
-
-            .results-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 2rem;
-                margin-top: 3rem;
-            }
-
-
-
-            .result-card {
-                background: #f8f8f8;
-                padding: 2rem;
-                border-radius: 20px;
-                text-align: center;
-            }
-
-
-
-            .before-after {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 1rem;
-                margin-bottom: 1rem;
-            }
-
-
-
-            .image-placeholder {
-                aspect-ratio: 1;
-                background: #ddd;
-                border-radius: 10px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-weight: 600;
-                color: #666;
-            }
-
-
-
-            .urgency-section {
-                padding: 80px 0;
-                background: linear-gradient(135deg, #ff6b6b, #ff5252);
-                color: white;
-            }
-
-
-
-            .urgency-content {
-                display: grid;
-                grid-template-columns: 2fr 1fr;
-                gap: 3rem;
-                align-items: center;
-            }
-
-
-
-            .benefits-list {
-                list-style: none;
-                padding: 0;
-                margin: 2rem 0;
-            }
-
-
-
-            .benefits-list li {
-                padding: 0.5rem 0;
-                font-size: 1.1rem;
-            }
-
-
-.countdown-timer {
-                text-align: center;
-                background: rgba(255, 255, 255, 0.1);
-                padding: 2rem;
-                border-radius: 15px;
-            }
-
-
-
-            .timer {
-                display: flex;
-                justify-content: center;
-                gap: 1rem;
-                margin-top: 1rem;
-            }
-
-
-
-            .time-unit {
-                background: rgba(255, 255, 255, 0.9);
-                color: #8b4d4d;
-                padding: 1rem;
-                border-radius: 10px;
-                min-width: 80px;
-            }
-
-
-
-            .time-unit span {
-                display: block;
-                font-size: 2rem;
-                font-weight: 700;
-            }
-
-
-
-            .time-unit label {
-                font-size: 0.8rem;
-                text-transform: uppercase;
-            }
-
-
-
-            .faq-section {
-                padding: 80px 0;
-                background: #f8f8f8;
-            }
-
-
-
-            .faq-container {
-                max-width: 800px;
+            .hero-image-wrapper {
+                width: 100%;
+                max-width: 380px;
+                height: auto;
                 margin: 0 auto;
             }
 
 
 
-            .faq-item {
-                background: white;
-                margin-bottom: 1rem;
-                border-radius: 10px;
-                overflow: hidden;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            .floating-card-1,
+            .floating-card-2 {
+                position: absolute;
+                transform: scale(0.8);
             }
-
-
-
-            .faq-question {
-                padding: 1.5rem 2rem;
-                cursor: pointer;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                background: white;
-                transition: background 0.3s ease;
-            }
-
-
-
-            .faq-question:hover {
-                background: #f8f8f8;
-            }
-
-
-
-            .faq-question h3 {
-                margin: 0;
-                color: #8b4d4d;
-                font-size: 1.1rem;
-            }
-
-
-
-            .faq-icon {
-                font-size: 1.5rem;
-                color: #8b4d4d;
-                font-weight: 700;
-                transition: transform 0.3s ease;
-            }
-
-
-
-            .faq-answer {
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s ease;
-            }
-
-
-
-            .faq-answer p {
-                padding: 0 2rem 1.5rem 2rem;
-                margin: 0;
-                color: #666;
-                line-height: 1.6;
-            }
-
-
-
-            .faq-item.active .faq-icon {
-                transform: rotate(180deg);
-            }
-
-
-
-            .cta-buttons {
-                display: flex;
-                gap: 1rem;
-                justify-content: center;
-                flex-wrap: wrap;
-                margin: 2rem 0;
-            }
-
-
-
-            .cta-button.primary {
-                background: white;
-                color: #8b4d4d;
-                font-size: 1.3rem;
-                padding: 1.5rem 3rem;
-            }
-
-
-
-            .cta-button.secondary {
-                background: rgba(255, 255, 255, 0.2);
-                color: white;
-                border: 2px solid white;
-                font-size: 1.1rem;
-                padding: 1.2rem 2.5rem;
-            }
-
-
-
-            .guarantee {
-                background: rgba(255, 255, 255, 0.1);
-                padding: 2rem;
-                border-radius: 15px;
-                margin: 3rem 0;
-                text-align: center;
-            }
-
-
-
-            .contact-info {
-                margin-top: 2rem;
-                text-align: center;
-            }
-
-
-
-            .contact-info p {
-                margin: 0.5rem 0;
-                font-size: 1.1rem;
-            }
-
-
-
-            .social-links {
-                margin-top: 1rem;
-                display: flex;
-                justify-content: center;
-                gap: 2rem;
-            }
-
-
-
-            .social-links a {
-                color: white;
-                text-decoration: none;
-                font-size: 1.1rem;
-                transition: opacity 0.3s ease;
-            }
-
-
-
-            .social-links a:hover {
-                opacity: 0.8;
-            }
-
-
-
-            @media (max-width: 768px) {
-                .urgency-content {
-                    grid-template-columns: 1fr;
-                    text-align: center;
-                }
-
-
-
-                .timer {
-                    flex-direction: column;
-                    align-items: center;
-                }
-
-
-
-                .time-unit {
-                    min-width: 120px;
-                }
-
-
-
-                .cta-buttons {
-                    flex-direction: column;
-                    align-items: center;
-                }
-
-
-
-                .cta-button {
-                    width: 100%;
-                    max-width: 400px;
-                }
-            }
-
-
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
         }
+
+
+
+        @media (max-width: 768px) {
+            :root {
+                --space-xs: 0.375rem;
+                --space-sm: 0.75rem;
+                --space-md: 1rem;
+                --space-lg: 1.5rem;
+                --space-xl: 2rem;
+                --space-2xl: 3rem;
+                --space-3xl: 4rem;
+            }
+
+
+
+            .container {
+                padding: 0 var(--space-sm);
+            }
+
+
+
+            .nav-links {
+                display: none;
+            }
+
+
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+
+
+            .hero {
+                min-height: auto;
+                padding: calc(80px + var(--space-xl)) 0 var(--space-xl);
+            }
+
+
+
+            .hero-cta-group {
+                flex-direction: column;
+            }
+
+
+
+            .btn {
+                justify-content: center;
+                padding: var(--space-sm) var(--space-lg);
+            }
+
+
+
+            .hero-stats {
+                justify-content: space-around;
+                gap: var(--space-md);
+            }
+
+
+
+            .services-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-lg);
+            }
+
+
+
+            .service-card,
+            .testimonial-card {
+                padding: var(--space-lg);
+            }
+
+
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+
+
+
+            .section-padding {
+                padding: var(--space-2xl) 0;
+            }
+
+             .hero-section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .hero-content {
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+              .hero-image-wrapper {
+                width: 90%;
+                max-width: 380px;
+                aspect-ratio: 3 / 4; /* Mantém proporção agradável */
+                height: auto;
+                overflow: hidden;
+                border-radius: 20px;
+                margin: 1.5rem auto;
+            }
+
+            .hero-main-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;           /* Preenche o espaço mantendo proporção */
+                object-position: center 15%; /* Mostra mais da parte de cima */
+            }
+
+            /* Garante que os cards não cortem */
+            .floating-card {
+                position: absolute;
+                transform: scale(0.9);
+                opacity: 1;
+                z-index: 3;
+            }
+
+            .floating-card-1 {
+                top: 20px;
+                right: 10px;
+            }
+
+            .floating-card-2 {
+                bottom: 20px;
+                left: 10px;
+            }
+
+            
+                        
+
+
+        }
+
+
+
+        @media (max-width: 480px) {
+            .hero-image-wrapper,
+            .about-image-wrapper {
+                width: 280px;
+                height: 350px;
+            }
+
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-rating {
+                justify-content: center; /* centraliza as estrelas no mobile */
+                margin-bottom: 8px;
+            }
+
+
+
+            .testimonial-card {
+                min-width: auto;
+            }
+
+            .nav-cta {
+                font-size: 0.875rem; /* reduz tamanho da fonte */
+                padding: 0.5rem 1rem; /* reduz o padding lateral */
+                border-radius: var(--radius-lg);
+            }
+
+            .nav-cta i {
+                font-size: 0.9rem;
+            }
+
+            .logo {
+                font-size: 1.25rem; /* reduz levemente o tamanho da logo */
+            }
+
+            .logo-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 1rem;
+            }
+
+
+            .hero-text {
+                overflow: visible;
+            }
+
+            /* Corrige o comportamento do badge */
+            .hero-badge {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.4rem;
+                font-size: 0.75rem;
+                line-height: 1.3;
+                padding: 0.4rem 0.8rem;
+                border-radius: 10px;
+                text-align: center;
+                background: rgba(139, 77, 77, 0.1);
+                color: var(--primary-color);
+                border: 1px solid rgba(139, 77, 77, 0.2);
+                white-space: normal; /* permite quebra */
+                width: auto; /* não força largura total */
+                max-width: 95%; /* garante que não estoure a tela */
+                margin: 0 auto 0.75rem auto; /* centraliza */
+            }
+
+            /* Ícone alinhado corretamente ao lado esquerdo */
+            .hero-badge i {
+                flex-shrink: 0;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.85rem;
+                margin-right: 0.3rem;
+            }
+
+            /* Texto quebra naturalmente */
+            .hero-badge span {
+                display: inline;
+                word-break: break-word;
+                text-align: left;
+            }
+
+            /* Evita corte de conteúdo na hero */
+            .hero {
+                overflow: visible;
+                min-height: auto;
+                padding-top: 100px; /* garante espaço para o selo e título */
+            }
+        }
+
+
+
+        /* ===== LOADING STATES ===== */
+        .loading {
+            position: relative;
+            overflow: hidden;
+        }
+
+
+
+        .loading::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.4), 
+                transparent);
+            animation: shimmer 1.5s infinite;
+        }
+
+
+
+        /* ===== ACCESSIBILITY ===== */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+
+
+        .focus-visible {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+
+
+        /* ===== PRINT STYLES ===== */
+        @media print {
+            .header,
+            .mobile-menu-btn,
+            .mobile-nav,
+            .floating-card {
+                display: none !important;
+            }
+            
+            body {
+                font-size: 12pt;
+                line-height: 1.4;
+                color: #000;
+            }
+            
+            .hero,
+            .services,
+            .about,
+            .contact {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+        
+                /* ===== Responsividade da seção Sobre Mim (sem afetar os cards) ===== */
+        @media (max-width: 768px) {
+        /* Alinha e organiza apenas o texto principal */
+        .about-text > p {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .about-text h2.section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-badge {
+            display: inline-block;
+            margin: 0 auto 0.8rem auto;
+            font-size: 0.8rem;
+        }
+
+        .about-content {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .about-text {
+            padding: 0 1rem;
+            max-width: 95%;
+            margin: 0 auto;
+        }
+        }
+
+        @media (max-width: 480px) {
+        .about-text > p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .about-text h2.section-title {
+            font-size: 1.6rem;
+        }
+        }
+
+        /* ===== SYMPTOMS SECTION ===== */
+        .symptoms {
+        background: var(--secondary-light);
+        position: relative;
+        overflow: hidden;
+        }
+
+        /* ==== Ajuste de alinhamento uniforme nos cards de sintomas ==== */
+        .symptom-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 2rem;
+        margin-top: var(--space-2xl);
+        align-items: stretch; /* 👈 garante que todos os cards tenham mesma altura */
+        }
+
+        .symptom-card {
+        background: var(--white);
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow-md);
+        padding: var(--space-xl);
+        text-align: center;
+        transition: all var(--transition-base);
+        border-top: 4px solid var(--primary-light);
+        display: flex;                 /* 👈 adiciona flexbox interno */
+        flex-direction: column;        /* ícone, título e texto em coluna */
+        justify-content: flex-start;   /* garante início alinhado */
+        align-items: center;           /* centraliza conteúdo */
+        height: 100%;                  /* garante altura igual dentro do grid */
+        }
+
+        .symptom-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-xl);
+        border-top-color: var(--primary-color);
+        }
+
+        .symptom-icon {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto var(--space-md);
+        border-radius: 16px;
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        color: var(--white);
+        box-shadow: var(--shadow-sm);
+        }
+
+        .symptom-card h3 {
+        color: var(--gray-900);
+        font-weight: 700;
+        margin: var(--space-md) 0 var(--space-sm);
+        min-height: 2.5rem; /* 👈 altura mínima padronizada para manter alinhamento dos textos */
+        }
+
+        .symptom-card p {
+        color: var(--gray-600);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        flex-grow: 1; /* 👈 empurra texto proporcionalmente */
+        display: flex;
+        align-items: flex-start; /* mantém o início alinhado */
+        text-align: center;
+        }
+
+        .symptom-warning {
+        margin-top: var(--space-3xl);
+        background: var(--primary-dark);
+        color: var(--white);
+        padding: var(--space-xl);
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow-lg);
+        text-align: center;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        }
+
+        .symptom-warning h4 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: var(--space-sm);
+        color: var(--white);
+        }
+
+        .symptom-warning p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        }
+
+        /* ===== RESPONSIVE ADJUSTMENTS ===== */
+        @media (max-width: 768px) {
+        .symptom-card {
+            padding: var(--space-lg);
+        }
+
+        .symptom-icon {
+            width: 56px;
+            height: 56px;
+            font-size: 1.5rem;
+        }
+
+        .symptom-warning {
+            padding: var(--space-lg);
+        }
+        }
+
+        /* ===== FAQ SECTION ===== */
+.faq {
+  background: var(--background-light, #f9f9fb);
+  position: relative;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-item.open {
+  box-shadow: var(--shadow-xl);
+  border-left: 4px solid var(--primary-color);
+}
+
+.faq-question {
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+  text-align: left;
+  background: none;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-question i {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-question i {
+  transform: rotate(45deg);
+  color: var(--primary-color);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: #fafafa;
+  padding: 0 1.5rem;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  color: var(--gray-700);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 200px;
+  padding: 1rem 1.5rem 1.5rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .faq-question {
+    font-size: 0.95rem;
+    padding: 1rem 1.2rem;
+  }
+
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    border-radius: 8px;
+    object-fit: contain;
+}
     </style>
 </head>
+
+
+
 <body>
-     <!-- Loading Overlay -->
-    <div class="loading-overlay" id="loadingOverlay">
-        <div class="spinner"></div>
-    </div>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+            <a href="#hero" class="logo" aria-label="Thifany Sá Estética - Home">
+                <img src="l.png" alt="Logo Thifany Sá" class="logo-img">
+                <span>Estética</span>
+            </a>
 
 
 
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="logo">TS Estética</div>
-            <button class="cta-header" onclick="scrollToCTA()">Agendar Consulta</button>
-        </nav>
+                <ul class="nav-links">
+                    <li><a href="#hero" class="nav-link active">Início</a></li>
+                    <li><a href="#services" class="nav-link">Serviços</a></li>
+                    <li><a href="#about" class="nav-link">Sobre</a></li>
+                    <li><a href="#testimonials" class="nav-link">Depoimentos</a></li>
+                    <li><a href="#contact" class="nav-link">Contato</a></li>
+                </ul>
+
+
+
+                <a href="#contact" class="nav-cta">Agendar Consulta</a>
+
+
+
+                <button class="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+
+
+                <div class="mobile-nav" id="mobileNav">
+                    <ul class="mobile-nav-links">
+                        <li><a href="#hero" class="nav-link">Início</a></li>
+                        <li><a href="#services" class="nav-link">Serviços</a></li>
+                        <li><a href="#about" class="nav-link">Sobre</a></li>
+                        <li><a href="#testimonials" class="nav-link">Depoimentos</a></li>
+                        <li><a href="#contact" class="nav-link">Contato</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
 
 
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero section-padding" id="hero">
         <div class="container">
-            <h1>Transforme Sua Saúde e Autoestima</h1>
-            <p>Descubra como milhares de mulheres recuperaram sua energia, eliminaram a acne e conquistaram a pele dos sonhos</p>
-            
-            <div class="credentials">
-                <strong>THIFANY SÁ</strong><br>
-                Biomédica Esteta CRBM 13.892<br>
-                📍 Luís Eduardo Magalhães, BA
-            </div>
+            <div class="hero-content">
+                <div class="hero-text fade-in-section">
+                    <div class="hero-badge">
+                        <i class="fas fa-certificate" aria-hidden="true"></i>
+                        <span>Biomédica com registro no CRBM 13.892</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Transforme Sua Saúde e Autoestima
+                    </h1>
+                    
+                    <p class="hero-subtitle">
+                        Descubra como muitas mulheres recuperaram sua energia, eliminaram a acne e conquistaram a pele dos sonhos com tratamentos estéticos avançados e reposição vitamínica especializada.
+                    </p>
 
 
 
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number">2.000+</span>
-                    <span class="stat-label">Pacientes Atendidas</span>
+                    <div class="hero-cta-group">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                            Agendar Consulta
+                        </a>
+                        <a href="https://wa.me/5577998000736" class="btn btn-secondary" target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                            WhatsApp
+                        </a>
+                    </div>
+
+
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">2000+</span>
+                            <span class="stat-label">Pacientes Atendidas</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Satisfação</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Anos Experiência</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">98%</span>
-                    <span class="stat-label">Satisfação</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">5+</span>
-                    <span class="stat-label">Anos Experiência</span>
+
+
+
+                <div class="hero-image-wrapper">
+                    <img src="limpeza-de-pele.jpeg" alt="Limpeza de pele facial" class="hero-main-image">
+
+                    <div class="floating-card floating-card-1">
+                        <h4>Energia Renovada</h4>
+                        <p>Resultados a partir de 48h</p>
+                    </div>
+
+                    <div class="floating-card floating-card-2">
+                        <h4>Pele Radiante</h4>
+                        <p>Textura suave e uniforme</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -966,271 +2432,372 @@
 
 
 
-    <!-- Video Section -->
-    <section class="video-section">
+    <!-- ===== SERVICES SECTION ===== -->
+    <section class="services section-padding" id="services">
         <div class="container">
-            <div class="video-container">
-                <h2 class="section-title">Veja Como Funciona o Tratamento</h2>
-                <div class="video-placeholder" id="mainVideo">
-                    <div class="play-button"></div>
-                    <p>Clique para assistir o depoimento completo</p>
-                </div>
-                <p><strong>⚠️ ATENÇÃO:</strong> Este vídeo contém informações que podem mudar sua vida. Assista até o final.</p>
+            <div class="section-header fade-in-section">
+                <div class="section-badge">Nossos Serviços</div>
+                <h2 class="section-title">Tratamentos especializados</h2>
+                <p class="section-subtitle">
+                    Combinamos técnicas avançadas de biomedicina estética com cuidado humanizado para oferecer resultados excepcionais e duradouros.
+                </p>
             </div>
-        </div>
-    </section>
 
 
 
-    <!-- Problem Agitation -->
-    <section class="problem-section">
-        <div class="container">
-            <h2 class="section-title">Você Se Reconhece Nestes Sintomas?</h2>
-            <div class="problems-grid">
-                <div class="problem-card">
-                    <div class="problem-icon">😴</div>
-                    <h3>Fadiga Constante</h3>
-                    <p>Cansaço que não passa mesmo dormindo bem, falta de energia para atividades básicas</p>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-icon">🔴</div>
-                    <h3>Acne Persistente</h3>
-                    <p>Espinhas que não melhoram com produtos caros, pele oleosa e com cravos</p>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-icon">😰</div>
-                    <h3>Ansiedade e Irritabilidade</h3>
-                    <p>Mudanças de humor, ansiedade sem causa aparente, dificuldade de concentração</p>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-icon">🤒</div>
-                    <h3>Imunidade Baixa</h3>
-                    <p>Gripes frequentes, alergias constantes, cicatrização lenta</p>
-                </div>
-            </div>
-            <div class="revelation-box">
-                <h3>A VERDADE QUE NINGUÉM TE CONTA:</h3>
-                <p>Esses sintomas NÃO são "normais" e muito menos "frescura". Na maioria das vezes, a causa é <strong>deficiência vitamínica</strong> que pode ser corrigida rapidamente.</p>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Services Section -->
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title">Nossos Tratamentos Exclusivos</h2>
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">💉</div>
-                    <h3>Reposição Vitamínica Injetável</h3>
-                    <p>Vitaminas B12, D3+K2, Complexo B e minerais essenciais com absorção 100% eficaz</p>
-                    <div class="service-benefits">
-                        <span class="benefit">✅ Energia em 48h</span>
-                        <span class="benefit">✅ Melhora imunidade</span>
-                        <span class="benefit">✅ Reduz ansiedade</span>
+                <div class="service-card fade-in-section">
+                    <div class="service-icon">
+                        <i class="fas fa-syringe" aria-hidden="true"></i>
                     </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">✨</div>
-                    <h3>Limpeza de Pele Profunda</h3>
-                    <p>Protocolo exclusivo para desobstruir poros, controlar oleosidade e prevenir acne</p>
-                    <div class="service-benefits">
-                        <span class="benefit">✅ Pele limpa e suave</span>
-                        <span class="benefit">✅ Reduz cravos</span>
-                        <span class="benefit">✅ Prepara para tratamentos</span>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">🌿</div>
-                    <h3>Protocolo Detox da Pele</h3>
-                    <p>Tratamento completo de dentro para fora, eliminando toxinas e regenerando a pele</p>
-                    <div class="service-benefits">
-                        <span class="benefit">✅ Elimina acne</span>
-                        <span class="benefit">✅ Uniformiza tom</span>
-                        <span class="benefit">✅ Rejuvenesce</span>
-                    </div>
-                </div>
-
-
-
-                <div class="service-card">
-                    <div class="service-icon">🎯</div>
-                    <h3>Microagulhamento</h3>
-                    <p>Técnica avançada para cicatrizes de acne, linhas finas e renovação celular</p>
-                    <div class="service-benefits">
-                        <span class="benefit">✅ Reduz cicatrizes</span>
-                        <span class="benefit">✅ Estimula colágeno</span>
-                        <span class="benefit">✅ Rejuvenesce pele</span>
-                    </div>
-                </div>
-
-
-
-                <div class="service-card">
-                    <div class="service-icon">💪</div>
-                    <h3>Skinbooster</h3>
-                    <p>Hidratação profunda e revitalização celular para pele radiante</p>
-                    <div class="service-benefits">
-                        <span class="benefit">✅ Hidratação intensa</span>
-                        <span class="benefit">✅ Brilho natural</span>
-                        <span class="benefit">✅ Anti-idade</span>
-                    </div>
-                </div>
-
-
-
-                <div class="service-card">
-                    <div class="service-icon">🔥</div>
-                    <h3>Tratamento Completo</h3>
-                    <p>Combinação personalizada de todos os tratamentos para resultados máximos</p>
-                    <div class="service-benefits">
-                        <span class="benefit">✅ Resultados potencializados</span>
-                        <span class="benefit">✅ Acompanhamento total</span>
-                        <span class="benefit">✅ Transformação completa</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">O Que Nossas Pacientes Dizem</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Eu estava muito mal ultimamente e não foi guerra espiritual, foi vitamina baixa! A Dra. Tiffany trabalha com segurança e responsabilidade. Minha energia voltou completamente!"</p>
-                    <div class="testimonial-author">Nicolly H. - Cliente Real</div>
-                </div>
-
-
-
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Minha pele é muito oleosa e acneica. A Dra. Tiffany me proporcionou uma pele com textura suave. Foi extremamente cuidadosa e profissional. Saí com a autoestima nas alturas!"</p>
-                    <div class="testimonial-author">Paciente Verificada</div>
-                </div>
-
-
-
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"O protocolo detox e as limpezas de pele foram cruciais para diminuir minhas espinhas. Se eu fosse você não perderia tempo e já faria também!"</p>
-                    <div class="testimonial-author">Nicolly - Influenciadora</div>
-                </div>
-
-
-
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Negligenciava coisas básicas por não entender o que estava acontecendo. A fadiga e ansiedade tinham causa interna: vitaminas baixas. A Dra. Tiffany mudou minha vida!"</p>
-                    <div class="testimonial-author">Cliente Transformada</div>
-                </div>
-
-
-
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Fiz reposição de vitamina B12 e D de forma injetável. Absorção rápida e eficiente. Mesmo as agulhas sendo temíveis, foi tão rápido que nem senti. Profissional responsável!"</p>
-                    <div class="testimonial-author">Paciente Satisfeita</div>
-                </div>
-
-
-
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Não consigo explicar o quanto minha imunidade melhorou desde que repus as vitaminas. O corpo funciona perfeitamente quando nada está disfuncional!"</p>
-                    <div class="testimonial-author">Resultado Comprovado</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Before/After Section -->
-    <section class="results-section">
-        <div class="container">
-            <h2 class="section-title">Resultados Reais de Nossas Pacientes</h2>
-            <div class="results-grid">
-                <div class="result-card">
-                    <div class="result-image">
-                        <div class="before-after">
-                            <div class="image-placeholder">ANTES</div>
-                            <div class="image-placeholder">DEPOIS</div>
-                        </div>
-                    </div>
-                    <h3>Tratamento de Acne</h3>
-                    <p>3 meses de protocolo detox + limpezas mensais</p>
-                </div>
-
-
-
-                <div class="result-card">
-                    <div class="result-image">
-                        <div class="before-after">
-                            <div class="image-placeholder">ANTES</div>
-                            <div class="image-placeholder">DEPOIS</div>
-                        </div>
-                    </div>
-                    <h3>Cicatrizes de Acne</h3>
-                    <p>6 sessões de microagulhamento + skinbooster</p>
-                </div>
-
-
-
-                <div class="result-card">
-                    <div class="result-image">
-                        <div class="before-after">
-                            <div class="image-placeholder">ANTES</div>
-                            <div class="image-placeholder">DEPOIS</div>
-                        </div>
-                    </div>
-                    <h3>Rejuvenescimento</h3>
-                    <p>Protocolo vitamínico + tratamentos faciais</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Urgency Section -->
-    <section class="urgency-section">
-        <div class="container">
-            <h2 class="section-title">⚠️ ATENÇÃO: Oferta Limitada!</h2>
-            <div class="urgency-content">
-                <div class="urgency-text">
-                    <h3>Apenas Hoje: 50% OFF na Primeira Consulta</h3>
-                    <p>Para as próximas <strong id="spotsLeft">7</strong> pessoas que agendarem agora:</p>
-                    <ul class="benefits-list">
-                        <li>✅ Consulta completa + Avaliação (de R$ 200 por R$ 100)</li>
-                        <li>✅ Protocolo personalizado GRÁTIS</li>
-                        <li>✅ Acompanhamento via WhatsApp por 30 dias</li>
-                        <li>✅ Garantia de satisfação ou dinheiro de volta</li>
+                    <h3 class="service-title">Reposição Vitamínica Injetável</h3>
+                    <p class="service-description">
+                        Vitaminas B12, D3+K2, Complexo B e minerais essenciais com absorção 100% eficaz. Recupere sua energia e vitalidade de forma rápida e segura.
+                    </p>
+                    <ul class="service-features">
+                        <li>Energia renovada em 24-48h</li>
+                        <li>Fortalecimento da imunidade</li>
+                        <li>Redução da ansiedade e fadiga</li>
+                        <li>Melhora do humor e concentração</li>
                     </ul>
                 </div>
-                <div class="countdown-timer">
-                    <h4>Oferta expira em:</h4>
-                    <div class="timer">
-                        <div class="time-unit">
-                            <span id="hours">23</span>
-                            <label>Horas</label>
+
+
+
+                <div class="service-card fade-in-section">
+                    <div class="service-icon">
+                        <i class="fas fa-spa" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="service-title">Limpeza de Pele Profunda</h3>
+                    <p class="service-description">
+                        Protocolo exclusivo para desobstruir poros, controlar oleosidade e prevenir acne. Tratamento humanizado e extremamente cuidadoso.
+                    </p>
+                    <ul class="service-features">
+                        <li>Remoção profunda de cravos</li>
+                        <li>Controle da oleosidade</li>
+                        <li>Prevenção de novas acnes</li>
+                        <li>Preparação para outros tratamentos</li>
+                    </ul>
+                </div>
+
+
+
+                <div class="service-card fade-in-section">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="service-title">Protocolo Detox da Pele</h3>
+                    <p class="service-description">
+                        Tratamento completo de dentro para fora, eliminando toxinas e regenerando a pele. Resultados visíveis e duradouros.
+                    </p>
+                    <ul class="service-features">
+                        <li>Eliminação de acne persistente</li>
+                        <li>Uniformização do tom da pele</li>
+                        <li>Efeito rejuvenescedor</li>
+                        <li>Melhora da textura geral</li>
+                    </ul>
+                </div>
+
+
+
+                <div class="service-card fade-in-section">
+                    <div class="service-icon">
+                        <i class="fas fa-magic" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="service-title">Microagulhamento</h3>
+                    <p class="service-description">
+                        Técnica avançada para cicatrizes de acne, linhas finas e renovação celular. Estimula a produção natural de colágeno.
+                    </p>
+                    <ul class="service-features">
+                        <li>Redução de cicatrizes de acne</li>
+                        <li>Estímulo à produção de colágeno</li>
+                        <li>Melhora da firmeza da pele</li>
+                        <li>Renovação celular acelerada</li>
+                    </ul>
+                </div>
+                
+
+
+
+                <div class="service-card fade-in-section">
+                    <div class="service-icon">
+                        <i class="fas fa-tint" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="service-title">Skinbooster</h3>
+                    <p class="service-description">
+                        Hidratação profunda e revitalização celular para uma pele radiante e com brilho natural. Efeito anti-idade comprovado.
+                    </p>
+                    <ul class="service-features">
+                        <li>Hidratação intensa e duradoura</li>
+                        <li>Brilho natural da pele</li>
+                        <li>Efeito anti-idade</li>
+                        <li>Melhora da elasticidade</li>
+                    </ul>
+                </div>
+
+
+
+
+
+                <div class="service-card fade-in-section">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-holding-water" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="service-title">Tratamento Capilar</h3>
+                    <p class="service-description">
+                        Cuidado intensivo para fortalecimento dos fios, controle de queda e estímulo ao crescimento saudável do cabelo.
+                    </p>
+                    <ul class="service-features">
+                        <li>Fortalecimento e nutrição dos fios</li>
+                        <li>Redução da queda capilar</li>
+                        <li>Estimula o crescimento natural</li>
+                        <li>Brilho e maciez visíveis</li>
+                    </ul>
+                </div>
+
+                <div class="service-card fade-in-section">
+                    <div class="service-icon">
+                        <i class="fas fa-user-shield" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="service-title">Botox Facial</h3>
+                    <p class="service-description">
+                        Técnica segura para suavizar linhas de expressão e promover rejuvenescimento facial com aparência natural.
+                    </p>
+                    <ul class="service-features">
+                        <li>Suaviza rugas e linhas finas</li>
+                        <li>Previne o envelhecimento precoce</li>
+                        <li>Proporciona efeito lifting imediato</li>
+                        <li>Resultados naturais e duradouros</li>
+                    </ul>
+                </div>
+
+
+                <div class="service-card fade-in-section">
+                    <div class="service-icon">
+                        <i class="fas fa-crown" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="service-title">Tratamento Completo</h3>
+                    <p class="service-description">
+                        Combinação personalizada de todos os tratamentos para resultados máximos. Protocolo exclusivo desenvolvido para seu caso.
+                    </p>
+                    <ul class="service-features">
+                        <li>Resultados potencializados</li>
+                        <li>Acompanhamento total</li>
+                        <li>Protocolo personalizado</li>
+                        <li>Transformação completa</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== SYMPTOMS SECTION ===== -->
+<section class="symptoms section-padding" id="symptoms">
+  <div class="container">
+    <div class="section-header fade-in-section">
+      <div class="section-badge">Sintomas Comuns</div>
+      <h2 class="section-title">Você se reconhece nestes sintomas?</h2>
+      <p class="section-subtitle">
+        Esses sinais podem indicar deficiências que afetam sua energia, humor e aparência — mas têm solução simples e eficaz.
+      </p>
+    </div>
+
+    <div class="symptom-grid">
+      <div class="symptom-card fade-in-section">
+        <div class="symptom-icon">
+          <i class="fas fa-bed"></i>
+        </div>
+        <h3>Fadiga Constante</h3>
+        <p>
+          Cansaço que não passa mesmo dormindo bem, falta de energia para atividades básicas.
+        </p>
+      </div>
+
+      <div class="symptom-card fade-in-section">
+        <div class="symptom-icon">
+          <i class="fas fa-pump-soap"></i>
+        </div>
+        <h3>Acne Persistente</h3>
+        <p>
+          Espinhas que não melhoram com produtos caros, pele oleosa e com cravos.
+        </p>
+      </div>
+
+      <div class="symptom-card fade-in-section">
+        <div class="symptom-icon">
+          <i class="fas fa-brain"></i>
+        </div>
+        <h3>Ansiedade e Irritabilidade</h3>
+        <p>
+          Mudanças de humor, ansiedade sem causa aparente e dificuldade de concentração.
+        </p>
+      </div>
+
+      <div class="symptom-card fade-in-section">
+        <div class="symptom-icon">
+          <i class="fas fa-shield-virus"></i>
+        </div>
+        <h3>Imunidade Baixa</h3>
+        <p>
+          Gripes frequentes, alergias constantes e cicatrização lenta.
+        </p>
+      </div>
+    </div>
+
+    <div class="symptom-warning fade-in-section">
+      <h4>A VERDADE QUE NINGUÉM TE CONTA:</h4>
+      <p>
+        Esses sintomas <strong>não são normais</strong> — na maioria das vezes, a causa é uma
+        <strong>deficiência vitamínica</strong> que pode ser corrigida rapidamente com o tratamento adequado.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- ===== TESTIMONIALS SECTION ===== -->
+    <section class="testimonials section-padding" id="testimonials">
+        <div class="container">
+            <div class="section-header fade-in-section">
+                <div class="section-badge">Depoimentos</div>
+                <h2 class="section-title">O Que Nossas Pacientes Dizem</h2>
+                <p class="section-subtitle">
+                    Histórias reais de transformação e resultados que falam por si só. Cada depoimento representa uma vida transformada.
+                </p>
+            </div>
+
+
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in-section">
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <blockquote class="testimonial-quote">
+                        "Eu estava muito mal ultimamente e não foi guerra espiritual, foi vitamina baixa! A Dra. Thifany trabalha com segurança e responsabilidade. Minha energia voltou completamente!"
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">N</div>
+                        <div class="testimonial-info">
+                            <h4>Nicolly H.</h4>
+                            <p>Cliente Verificada</p>
                         </div>
-                        <div class="time-unit">
-                            <span id="minutes">45</span>
-                            <label>Minutos</label>
+                    </div>
+                </div>
+
+
+
+                <div class="testimonial-card fade-in-section">
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <blockquote class="testimonial-quote">
+                        "Minha pele é muito oleosa e acneica. A Dra. Thifany me proporcionou uma pele com textura suave. Foi extremamente cuidadosa e profissional. Saí com a autoestima nas alturas!"
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">M</div>
+                        <div class="testimonial-info">
+                            <h4>Maria S.</h4>
+                            <p>Tratamento de Acne</p>
                         </div>
-                        <div class="time-unit">
-                            <span id="seconds">30</span>
-                            <label>Segundos</label>
+                    </div>
+                </div>
+
+
+
+                <div class="testimonial-card fade-in-section">
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <blockquote class="testimonial-quote">
+                        "O protocolo detox e as limpezas de pele foram cruciais para diminuir minhas espinhas. Se eu fosse você não perderia tempo e já faria também!"
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">N</div>
+                        <div class="testimonial-info">
+                            <h4>Nicolly - Influenciadora</h4>
+                            <p>Protocolo Detox</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="testimonial-card fade-in-section">
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <blockquote class="testimonial-quote">
+                        "Fiz reposição de vitamina B12 e D de forma injetável. Absorção rápida e eficiente. Mesmo as agulhas sendo temíveis, foi tão rápido que nem senti. Profissional responsável!"
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">A</div>
+                        <div class="testimonial-info">
+                            <h4>Ana Clara</h4>
+                            <p>Reposição Vitamínica</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="testimonial-card fade-in-section">
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <blockquote class="testimonial-quote">
+                        "Não consigo explicar o quanto minha imunidade melhorou desde que repus as vitaminas. O corpo funciona perfeitamente quando nada está disfuncional!"
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">C</div>
+                        <div class="testimonial-info">
+                            <h4>Carla M.</h4>
+                            <p>Resultado Comprovado</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="testimonial-card fade-in-section">
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <blockquote class="testimonial-quote">
+                        "Cuidar da nossa pele é cuidar daquilo que Deus nos deu. Que bom fazer isso ao lado de um profissional que sabe o que está fazendo. Recomendo de olhos fechados!"
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">L</div>
+                        <div class="testimonial-info">
+                            <h4>Larissa R.</h4>
+                            <p>Cliente Fiel</p>
                         </div>
                     </div>
                 </div>
@@ -1238,328 +2805,1290 @@
         </div>
     </section>
 
+<section id="resultados" class="padded-section bg-secondary">
+    <div class="container">
+        <h2 class="text-center section-title">Resultados Que Falam Por Si</h2>
+        <p class="text-center section-subtitle">Veja a transformação e o que meus clientes estão dizendo!</p>
 
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <h2 class="section-title">Perguntas Frequentes</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>As vitaminas injetáveis são seguras?</h3>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                                                <p>Sim, completamente seguras quando aplicadas por profissional qualificado. Sou Biomédica registrada no CRBM 13.892 e utilizo apenas produtos farmacêuticos de alta qualidade. A aplicação é rápida e praticamente indolor.</p>
-                    </div>
+        <div class="carousel-container">
+            <div class="carousel-track" data-carousel>
+                
+                <div class="carousel-slide" data-slide-index="0">
+                    <img src="./Prova Sociais/2o.png" alt="Resultado de tratamento estético 1" loading="lazy" class="result-image">
                 </div>
 
-
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Quanto tempo para ver resultados?</h3>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Para vitaminas injetáveis: energia e disposição em 24-48h. Para tratamentos de pele: melhoras visíveis em 7-15 dias, resultados completos em 2-3 meses com protocolo adequado.</p>
-                    </div>
+                <div class="carousel-slide" data-slide-index="1">
+                    <img src="./Prova Sociais/3o.png" alt="Resultado de tratamento estético 2" loading="lazy" class="result-image">
+                </div>
+                
+                <div class="carousel-slide" data-slide-index="2">
+                    <img src="./Prova Sociais/8o.png" alt="Resultado de tratamento estético 3" loading="lazy" class="result-image">
+                </div>
+                
+                <div class="carousel-slide" data-slide-index="3">
+                    <img src="./Prova Sociais/9o.png" alt="Resultado de tratamento estético 4" loading="lazy" class="result-image">
                 </div>
 
-
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>É necessário fazer exames antes?</h3>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Recomendo exames para identificar deficiências específicas, mas posso solicitar os exames necessários durante a consulta. Trabalho sempre com segurança e responsabilidade.</p>
-                    </div>
+                <div class="carousel-slide" data-slide-index="4">
+                    <img src="./Prova Sociais/10o.png" alt="Resultado de tratamento estético 5" loading="lazy" class="result-image">
                 </div>
 
-
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Os tratamentos são dolorosos?</h3>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Sou extremamente cuidadosa e humanizada. Utilizo técnicas para minimizar desconforto. As aplicações são rápidas e a maioria das pacientes relatam que "nem sentiram".</p>
-                    </div>
+                <div class="carousel-slide testimonial-slide" data-slide-index="5">
+                    <img src="./Prova Sociais/11o.png" alt="Depoimento de cliente 1" loading="lazy" class="testimonial-image">
+                </div>
+                
+                <div class="carousel-slide testimonial-slide" data-slide-index="6">
+                    <img src="./Prova Sociais/12o.png" alt="Depoimento de cliente 2" loading="lazy" class="testimonial-image">
                 </div>
 
-
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Qual a frequência dos tratamentos?</h3>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Vitaminas: conforme necessidade individual (semanal/quinzenal). Limpeza de pele: mensal. Microagulhamento: 15-30 dias entre sessões. Tudo personalizado para seu caso.</p>
-                    </div>
+                <div class="carousel-slide testimonial-slide" data-slide-index="6">
+                    <img src="./Prova Sociais/1p.png" alt="Depoimento de cliente 2" loading="lazy" class="testimonial-image">
+                </div>
+                
+                <div class="carousel-slide testimonial-slide" data-slide-index="7">
+                    <img src="./Prova Sociais/13o.png" alt="Depoimento de cliente 3" loading="lazy" class="testimonial-image">
+                </div>
+                
+                <div class="carousel-slide testimonial-slide" data-slide-index="8">
+                    <img src="./Prova Sociais/14o.png" alt="Depoimento de cliente 4" loading="lazy" class="testimonial-image">
                 </div>
 
-
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Atende apenas mulheres cristãs?</h3>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Atendo todas as pessoas que desejam cuidar da saúde e autoestima. Acredito que cuidar do corpo é cuidar do que Deus nos deu, independente da religião.</p>
-                    </div>
+                <div class="carousel-slide testimonial-slide" data-slide-index="8">
+                    <img src="./Prova Sociais/15o.png" alt="Depoimento de cliente 4" loading="lazy" class="testimonial-image">
                 </div>
+
+                <div class="carousel-slide testimonial-slide" data-slide-index="8">
+                    <img src="./Prova Sociais/16o.png" alt="Depoimento de cliente 4" loading="lazy" class="testimonial-image">
+                </div>
+
+                <div class="carousel-slide testimonial-slide" data-slide-index="8">
+                    <img src="./Prova Sociais/17o.png" alt="Depoimento de cliente 4" loading="lazy" class="testimonial-image">
+                </div>
+
+                <div class="carousel-slide testimonial-slide" data-slide-index="8">
+                    <img src="./Prova Sociais/20o.png" alt="Depoimento de cliente 4" loading="lazy" class="testimonial-image">
+                </div>
+
+                <div class="carousel-slide testimonial-slide" data-slide-index="8">
+                    <img src="./Prova Sociais/21o.png" alt="Depoimento de cliente 4" loading="lazy" class="testimonial-image">
+                </div>
+
+                 <div class="carousel-slide testimonial-slide" data-slide-index="6">
+                    <img src="./Prova Sociais/2p.png" alt="Depoimento de cliente 2" loading="lazy" class="testimonial-image">
+                </div>
+
             </div>
-        </div>
-    </section>
-
-
-
-    <!-- CTA Section -->
-    <section class="cta-section" id="ctaSection">
-        <div class="container">
-            <h2>🚀 Pronta Para Sua Transformação?</h2>
-            <p>Não deixe para amanhã o que pode mudar sua vida hoje!</p>
             
-            <div class="cta-buttons">
-                <a href="cadastro.html" class="cta-button primary" onclick="trackEvent('LeadMagnet', 'Click', 'Main_CTA')">
-                    💬 Quero Minha Consulta 50% OFF
-                </a>
-                <a href="https://wa.me/5577998000736?text=Olá! Vi sua página e gostaria de agendar minha consulta com 50% de desconto!" class="cta-button secondary" target="_blank">
-                    📱 Chamar no WhatsApp
-                </a>
-            </div>
+            <button class="carousel-button prev" data-carousel-button="prev" aria-label="Slide anterior">
+                &lt;
+            </button>
+            <button class="carousel-button next" data-carousel-button="next" aria-label="Próximo slide">
+                &gt;
+            </button>
+            
+            <div class="carousel-indicators" data-carousel-indicators>
+                </div>
+
+        </div>
+
+    </div>
+</section>
 
 
 
-            <div class="guarantee">
-                <h3>🛡️ GARANTIA TOTAL</h3>
-                <p>Se não ficar satisfeita em 30 dias, devolvemos 100% do seu dinheiro!</p>
-            </div>
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text fade-in-section">
+                    <div class="section-badge">Sobre Mim</div>
+                    <h2 class="section-title">Thifany Sá</h2>
+                    <p class="text-lg">
+                        Biomédica Esteta registrada no CRBM 13.892, especializada em tratamentos estéticos avançados e reposição vitamínica. Minha missão é transformar vidas através do cuidado integral com a saúde e autoestima.
+                    </p>
+                    <p>
+                        Com mais de 5 anos de experiência e mais de 2.000 pacientes atendidas, desenvolvi protocolos exclusivos que tratam de dentro para fora, sempre priorizando a segurança, responsabilidade e o cuidado humanizado.
+                    </p>
+                    <p>
+                        Acredito que cuidar do corpo é cuidar daquilo que Deus nos deu, e cada tratamento é personalizado para atender às necessidades específicas de cada paciente, sempre com base científica e resultados comprovados.
+                    </p>
 
 
 
-            <div class="contact-info">
-                <p>📍 <strong>Endereço:</strong> Luís Eduardo Magalhães, BA</p>
-                <p>📞 <strong>Telefone:</strong> (77) 99800-0736</p>
-                <p>⏰ <strong>Horário:</strong> Seg-Sex 8h às 18h | Sáb 8h às 12h</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-certificate" aria-hidden="true"></i>
+                            </div>
+                            <div class="about-feature-text">
+                                <h4>Certificação Profissional</h4>
+                                <p>CRBM 13.892 - Biomédica Esteta</p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                            </div>
+                            <div class="about-feature-text">
+                                <h4>2000+ Pacientes</h4>
+                                <p>Atendidas com excelência</p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-heart" aria-hidden="true"></i>
+                            </div>
+                            <div class="about-feature-text">
+                                <h4>Cuidado Humanizado</h4>
+                                <p>Tratamento personalizado</p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-award" aria-hidden="true"></i>
+                            </div>
+                            <div class="about-feature-text">
+                                <h4>98% Satisfação</h4>
+                                <p>Resultados comprovados</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="about-image fade-in-section">
+                    <div class="about-image-wrapper">
+                        <img src="face.jpeg" alt="Thifany Sá - Biomédica Esteta" loading="lazy">
+                        <div class="credentials-badge">
+                            <h4>THIFANY SÁ</h4>
+                            <p>Biomédica Esteta<br>CRBM 13.892</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
 
 
-    <!-- Footer -->
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact section-padding" id="contact">
+        <div class="container">
+            <div class="section-header fade-in-section">
+                <div class="section-badge">Contato</div>
+                <h2 class="section-title">Agende Sua Consulta</h2>
+                <p class="section-subtitle">
+                    Pronta para transformar sua saúde e autoestima? Entre em contato conosco e dê o primeiro passo rumo à sua melhor versão.
+                </p>
+            </div>
+
+
+
+            <div class="contact-content">
+                <div class="contact-info fade-in-section">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Endereço</h4>
+                            <p>Luís Eduardo Magalhães<br>Bahia, Brasil</p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telefone</h4>
+                            <p><a href="tel:+5577998000736">(77) 99800-0736</a></p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/5577998000736" target="_blank" rel="noopener">Conversar Agora</a></p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock" aria-hidden="true"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Horário de Funcionamento</h4>
+                            <p>Segunda à Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Instagram</h4>
+                            <p><a href="https://instagram.com/drathifanysa" target="_blank" rel="noopener">@drathifanysa</a></p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <form class="contact-form fade-in-section" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="name" class="form-label">Nome Completo *</label>
+                        <input type="text" id="name" name="name" class="form-input" required aria-describedby="nameError">
+                        <div class="error-message" id="nameError">Por favor, informe seu nome completo.</div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">E-mail *</label>
+                        <input type="email" id="email" name="email" class="form-input" required aria-describedby="emailError">
+                        <div class="error-message" id="emailError">Por favor, informe um e-mail válido.</div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label for="phone" class="form-label">WhatsApp *</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="(77) 99999-9999" required aria-describedby="phoneError">
+                        <div class="error-message" id="phoneError">Por favor, informe seu WhatsApp.</div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label for="service" class="form-label">Serviço de Interesse</label>
+                        <select id="service" name="service" class="form-select">
+                            <option value="">Selecione um serviço</option>
+                            <option value="vitaminas">Reposição Vitamínica Injetável</option>
+                            <option value="limpeza">Limpeza de Pele Profunda</option>
+                            <option value="detox">Protocolo Detox da Pele</option>
+                            <option value="microagulhamento">Microagulhamento</option>
+                            <option value="skinbooster">Skinbooster</option>
+                            <option value="capilar">Tratamento Capilar</option>      <!-- novo -->
+                            <option value="botox">Botox Facial</option>              <!-- novo -->
+                            <option value="completo">Tratamento Completo</option>
+                            <option value="consulta">Consulta de Avaliação</option>
+                        </select>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Mensagem</label>
+                        <textarea id="message" name="message" class="form-textarea" placeholder="Conte-me sobre seus objetivos e como posso ajudá-la..."></textarea>
+                    </div>
+
+
+
+                    <button type="submit" class="form-submit" id="submitBtn">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== FAQ SECTION ===== -->
+<section class="faq section-padding" id="faq">
+  <div class="container">
+    <div class="section-header fade-in-section">
+      <div class="section-badge">FAQ</div>
+      <h2 class="section-title">Perguntas Frequentes</h2>
+      <p class="section-subtitle">
+        Tire suas dúvidas sobre os procedimentos, segurança e resultados dos nossos tratamentos.
+      </p>
+    </div>
+
+    <div class="faq-container">
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>As vitaminas injetáveis são seguras?</span>
+          <i class="fas fa-plus"></i>
+        </button>
+        <div class="faq-answer">
+          <p>Sim. Trabalhamos apenas com vitaminas aprovadas pela Anvisa fabricadas pelo maior laboratório de manipulação de ativos estéreis do Brasil, garantindo total segurança.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Quanto tempo para ver resultados?</span>
+          <i class="fas fa-plus"></i>
+        </button>
+        <div class="faq-answer">
+          <p>Em geral, os resultados começam a ser percebidos entre 48 e 72 horas após a aplicação, variando conforme o metabolismo individual.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>É necessário fazer exames antes?</span>
+          <i class="fas fa-plus"></i>
+        </button>
+        <div class="faq-answer">
+          <p>Sim. Antes de qualquer protocolo, realizamos uma avaliação completa para garantir que o tratamento seja seguro e adequado para sua saúde.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Os tratamentos são dolorosos?</span>
+          <i class="fas fa-plus"></i>
+        </button>
+        <div class="faq-answer">
+          <p>Não. Utilizamos técnicas modernas e produtos de alta qualidade que minimizam o desconforto durante o procedimento.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Qual a frequência dos tratamentos?</span>
+          <i class="fas fa-plus"></i>
+        </button>
+        <div class="faq-answer">
+          <p>Depende do protocolo escolhido. Alguns exigem sessões semanais, outros apenas manutenção mensal. Tudo é personalizado para você.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Thifany Sá Estética Avançada. Todos os direitos reservados.</p>
-            <p>CRBM 13.892 | Biomédica Esteta</p>
-            <div class="social-links">
-                <a href="https://instagram.com/drathifanysa" target="_blank">📱 Instagram</a>
-                <a href="https://wa.me/5577998000736" target="_blank">💬 WhatsApp</a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Thifany Sá Estética Avançada</h3>
+                    <p>Biomédica Esteta especializada em tratamentos estéticos avançados e reposição vitamínica. Transformando vidas através do cuidado integral com a saúde e autoestima.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/drathifanysa" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://wa.me/5577998000736" class="social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        </a>
+                        <a href="tel:+5577998000736" class="social-link" aria-label="Telefone">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <div class="footer-section">
+                    <h3>Serviços</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">Reposição Vitamínica Injetável</a></li>
+                        <li><a href="#services">Limpeza de Pele Profunda</a></li>
+                        <li><a href="#services">Protocolo Detox da Pele</a></li>
+                        <li><a href="#services">Microagulhamento</a></li>
+                        <li><a href="#services">Skinbooster</a></li>
+                        <li><a href="#services">Tratamento Completo</a></li>
+                    </ul>
+                </div>
+
+
+
+                <div class="footer-section">
+                    <h3>Links Úteis</h3>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Início</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#testimonials">Depoimentos</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                        <li><a href="#services">Nossos Serviços</a></li>
+                    </ul>
+                </div>
+
+
+
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p><strong>Endereço:</strong><br>Luís Eduardo Magalhães, BA</p>
+                    <p><strong>Telefone:</strong><br><a href="tel:+5577998000736">(77) 99800-0736</a></p>
+                    <p><strong>Horário:</strong><br>Seg-Sex: 8h às 18h<br>Sáb: 8h às 12h</p>
+                    <p><strong>CRBM:</strong> 13.892</p>
+                </div>
+            </div>
+
+
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Thifany Sá Estética Avançada. Todos os direitos reservados. | CRBM 13.892</p>
             </div>
         </div>
     </footer>
 
 
 
+    <!-- ===== JAVASCRIPT ===== -->
     <script>
-        // Tracking de eventos
-        function trackEvent(category, action, label) {
-            // Facebook Pixel
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'Lead', {
-                    content_category: category,
-                    content_name: label
-                });
+
+
+ document.querySelectorAll(".faq-question").forEach(button => {
+    button.addEventListener("click", () => {
+      const faqItem = button.parentElement;
+      const isOpen = faqItem.classList.contains("open");
+
+      document.querySelectorAll(".faq-item").forEach(item => item.classList.remove("open"));
+      if (!isOpen) faqItem.classList.add("open");
+    });
+  });
+
+// ===== CÓDIGO JAVASCRIPT FINAL PARA O CARROSSEL =====
+
+document.addEventListener('DOMContentLoaded', () => {
+    const carouselContainer = document.querySelector('.carousel-container');
+    
+    // Se o contêiner não for encontrado, encerra a execução
+    if (!carouselContainer) return;
+
+    const track = carouselContainer.querySelector('[data-carousel]');
+    const slides = Array.from(track.querySelectorAll('.carousel-slide'));
+    const prevButton = carouselContainer.querySelector('[data-carousel-button="prev"]');
+    const nextButton = carouselContainer.querySelector('[data-carousel-button="next"]');
+    const indicatorsContainer = carouselContainer.querySelector('[data-carousel-indicators]');
+    
+    const totalSlides = slides.length;
+    let currentIndex = 0;
+    let intervalId = null;
+    
+    // Verifica se é um dispositivo móvel (largura menor ou igual a 768px)
+    const isMobile = window.matchMedia("(max-width: 768px)").matches; 
+    const autoSlideTime = 5000; // 5 segundos para a troca automática
+
+    // --- FUNÇÃO CRUCIAL: AJUSTA A ALTURA PARA EVITAR SALTO ---
+    function setCarouselHeight() {
+        let maxHeight = 0;
+        
+        // Temporariamente, permite que a altura se ajuste para medir o conteúdo
+        carouselContainer.style.height = 'auto'; 
+        
+        // Encontra a altura máxima de todos os slides visíveis
+        slides.forEach(slide => {
+            // offsetHeight mede a altura do elemento (incluindo padding)
+            const slideHeight = slide.offsetHeight; 
+            if (slideHeight > maxHeight) {
+                maxHeight = slideHeight;
             }
-            
-            // Google Analytics
-            if (typeof gtag !== 'undefined') {
-                gtag('event', action, {
-                    event_category: category,
-                    event_label: label
-                });
+        });
+        
+        // Aplica a altura máxima ao contêiner principal para fixá-lo
+        if (maxHeight > 0) {
+            carouselContainer.style.height = `${maxHeight}px`; 
+        }
+    }
+
+    // --- FUNÇÃO DE NAVEGAÇÃO ---
+    function showSlide(index) {
+        // Usa o operador módulo (%) para criar um loop circular (volta ao primeiro slide)
+        currentIndex = (index + totalSlides) % totalSlides;
+        
+        // Aplica a transição CSS no track
+        track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        updateIndicators();
+    }
+    
+    function goToPrevSlide() { showSlide(currentIndex - 1); resetAutoSlide(); }
+    function goToNextSlide() { showSlide(currentIndex + 1); resetAutoSlide(); }
+    
+    // --- GESTÃO DA PASSAGEM AUTOMÁTICA ---
+    function startAutoSlide() {
+        // Inicia APENAS se não for mobile e se não estiver ativo
+        if (isMobile || intervalId) return; 
+        
+        intervalId = setInterval(() => { showSlide(currentIndex + 1); }, autoSlideTime);
+    }
+    
+    function resetAutoSlide() {
+        if (isMobile) return;
+        clearInterval(intervalId);
+        intervalId = null;
+        startAutoSlide();
+    }
+
+    // --- INDICADORES (DOTS) ---
+    function createIndicators() {
+        if (indicatorsContainer) {
+            slides.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.classList.add('indicator-dot');
+                dot.addEventListener('click', () => { showSlide(index); resetAutoSlide(); });
+                indicatorsContainer.appendChild(dot);
+            });
+        }
+    }
+
+    function updateIndicators() {
+        if (indicatorsContainer) {
+            const dots = indicatorsContainer.querySelectorAll('.indicator-dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+    }
+
+    // --- INICIALIZAÇÃO E EVENT LISTENERS ---
+    prevButton.addEventListener('click', goToPrevSlide);
+    nextButton.addEventListener('click', goToNextSlide);
+    
+    createIndicators();
+    showSlide(0); 
+    startAutoSlide(); 
+    
+    // Pausa a transição automática ao passar o mouse (desktop)
+    carouselContainer.addEventListener('mouseenter', () => clearInterval(intervalId));
+    carouselContainer.addEventListener('mouseleave', resetAutoSlide);
+    
+    // 1. Roda a função de altura no início e no redimensionamento
+    setCarouselHeight();
+    window.addEventListener('resize', setCarouselHeight);
+    
+    // 2. Garante que a altura seja ajustada APÓS o carregamento de todas as imagens 
+    // (Isso resolve o problema da imagem "quebrada" ou do salto inicial)
+    const images = track.querySelectorAll('img');
+    let imagesLoadedCount = 0;
+    images.forEach(img => {
+        if (img.complete) {
+            imagesLoadedCount++;
+        } else {
+            img.addEventListener('load', () => {
+                imagesLoadedCount++;
+                if (imagesLoadedCount === images.length) {
+                    setCarouselHeight();
+                }
+            });
+            img.addEventListener('error', () => {
+                // Se uma imagem falhar, ainda tentamos ajustar a altura
+                imagesLoadedCount++; 
+                if (imagesLoadedCount === images.length) {
+                    setCarouselHeight();
+                }
+            });
+        }
+    });
+    // Se todas as imagens já estavam carregadas (cache), executa o ajuste imediatamente.
+    if (images.length > 0 && imagesLoadedCount === images.length) {
+         setCarouselHeight();
+    }
+});
+        // ===== NAVIGATION FUNCTIONALITY =====
+        class Navigation {
+            constructor() {
+                this.header = document.getElementById('header');
+                this.mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+                this.mobileNav = document.getElementById('mobileNav');
+                this.navLinks = document.querySelectorAll('.nav-link');
+                this.sections = document.querySelectorAll('section[id]');
+                
+                this.init();
             }
 
 
 
-            // Envio para API customizada
-            fetch('/event', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    event_name: 'Lead',
-                    custom_data: {
-                        category: category,
-                        action: action,
-                        label: label
-                    },
-                    user: {
-                        fbp: getCookie('_fbp'),
-                        fbc: getCookie('_fbc')
+            init() {
+                this.setupScrollEffects();
+                this.setupMobileMenu();
+                this.setupSmoothScrolling();
+                this.setupActiveNavigation();
+            }
+
+
+
+            setupScrollEffects() {
+                let lastScrollY = window.scrollY;
+                
+                window.addEventListener('scroll', () => {
+                    const currentScrollY = window.scrollY;
+                    
+                    // Header scroll effect
+                    if (currentScrollY > 100) {
+                        this.header.classList.add('scrolled');
+                    } else {
+                        this.header.classList.remove('scrolled');
                     }
-                })
-            }).catch(err => console.log('Tracking error:', err));
-        }
+                    
+                    lastScrollY = currentScrollY;
+                });
+            }
 
 
 
-        // Função para pegar cookies
-        function getCookie(name) {
-            const value = `; ${document.cookie}`;
-            const parts = value.split(`; ${name}=`);
-            if (parts.length === 2) return parts.pop().split(';').shift();
-        }
+            setupMobileMenu() {
+                this.mobileMenuBtn.addEventListener('click', () => {
+                    const isExpanded = this.mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+                    
+                    this.mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+                    this.mobileNav.classList.toggle('active');
+                    
+                    // Change icon
+                    const icon = this.mobileMenuBtn.querySelector('i');
+                    icon.className = this.mobileNav.classList.contains('active') ? 
+                        'fas fa-times' : 'fas fa-bars';
+                });
 
 
 
-        // Countdown Timer
-        function startCountdown() {
-            const countdown = setInterval(function() {
-                const hours = document.getElementById('hours');
-                const minutes = document.getElementById('minutes');
-                const seconds = document.getElementById('seconds');
-                
-                let h = parseInt(hours.textContent);
-                let m = parseInt(minutes.textContent);
-                let s = parseInt(seconds.textContent);
+                // Close mobile menu when clicking on links
+                this.navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        this.mobileNav.classList.remove('active');
+                        this.mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                        const icon = this.mobileMenuBtn.querySelector('i');
+                        icon.className = 'fas fa-bars';
+                    });
+                });
 
 
 
-                if (s > 0) {
-                    s--;
-                } else if (m > 0) {
-                    m--;
-                    s = 59;
-                } else if (h > 0) {
-                    h--;
-                    m = 59;
-                    s = 59;
-                } else {
-                    clearInterval(countdown);
-                    return;
-                }
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!this.mobileNav.contains(e.target) && !this.mobileMenuBtn.contains(e.target)) {
+                        this.mobileNav.classList.remove('active');
+                        this.mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                        const icon = this.mobileMenuBtn.querySelector('i');
+                        icon.className = 'fas fa-bars';
+                    }
+                });
+            }
 
 
 
-                hours.textContent = h.toString().padStart(2, '0');
-                minutes.textContent = m.toString().padStart(2, '0');
-                seconds.textContent = s.toString().padStart(2, '0');
-            }, 1000);
-        }
+            setupSmoothScrolling() {
+                this.navLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const targetId = link.getAttribute('href');
+                        const targetSection = document.querySelector(targetId);
+                        
+                        if (targetSection) {
+                            const offsetTop = targetSection.offsetTop - 80; // Account for fixed header
+                            
+                            window.scrollTo({
+                                top: offsetTop,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+            }
 
 
 
-        // Spots counter
-        function updateSpots() {
-            const spotsElement = document.getElementById('spotsLeft');
-            const currentSpots = parseInt(spotsElement.textContent);
-            
-            if (currentSpots > 1) {
-                const randomDecrease = Math.random() < 0.3; // 30% chance
-                if (randomDecrease) {
-                    spotsElement.textContent = currentSpots - 1;
-                }
+            setupActiveNavigation() {
+                const observerOptions = {
+                    root: null,
+                    rootMargin: '-80px 0px -80px 0px',
+                    threshold: 0.3
+                };
+
+
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const targetId = `#${entry.target.id}`;
+                            
+                            // Remove active class from all nav links
+                            this.navLinks.forEach(link => link.classList.remove('active'));
+                            
+                            // Add active class to current nav link
+                            const activeLink = document.querySelector(`.nav-link[href="${targetId}"]`);
+                            if (activeLink) {
+                                activeLink.classList.add('active');
+                            }
+                        }
+                    });
+                }, observerOptions);
+
+
+
+                this.sections.forEach(section => {
+                    observer.observe(section);
+                });
             }
         }
 
 
 
-        // FAQ Toggle
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const faqItem = question.parentElement;
-                const answer = faqItem.querySelector('.faq-answer');
-                const icon = question.querySelector('.faq-icon');
-                
-                faqItem.classList.toggle('active');
-                
-                if (faqItem.classList.contains('active')) {
-                    answer.style.maxHeight = answer.scrollHeight + 'px';
-                    icon.textContent = '-';
-                } else {
-                    answer.style.maxHeight = '0';
-                    icon.textContent = '+';
-                }
-            });
-        });
+        // ===== SCROLL ANIMATIONS =====
+        class ScrollAnimations {
+            constructor() {
+                this.animatedElements = document.querySelectorAll('.fade-in-section');
+                this.init();
+            }
 
 
 
-        // Smooth scroll
-        function scrollToCTA() {
-            document.getElementById('ctaSection').scrollIntoView({
-                behavior: 'smooth'
-            });
-            trackEvent('Navigation', 'Scroll', 'Header_CTA');
+            init() {
+                this.setupIntersectionObserver();
+            }
+
+
+
+            setupIntersectionObserver() {
+                const observerOptions = {
+                    root: null,
+                    rootMargin: '0px 0px -100px 0px',
+                    threshold: 0.1
+                };
+
+
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                        }
+                    });
+                }, observerOptions);
+
+
+
+                this.animatedElements.forEach(element => {
+                    observer.observe(element);
+                });
+            }
         }
 
 
 
-        // Video click tracking
-        document.getElementById('mainVideo').addEventListener('click', function() {
-            trackEvent('Video', 'Play', 'Main_Video');
-            // Aqui você pode adicionar o código para reproduzir o vídeo real
-            alert('Vídeo será carregado aqui. Integre com YouTube, Vimeo ou player personalizado.');
+        // ===== FORM HANDLING =====
+        class FormHandler {
+            constructor() {
+                this.form = document.getElementById('contactForm');
+                this.submitBtn = document.getElementById('submitBtn');
+                this.phoneInput = document.getElementById('phone');
+                
+                this.init();
+            }
+
+
+
+            init() {
+                this.setupPhoneMask();
+                this.setupFormValidation();
+                this.setupFormSubmission();
+            }
+
+
+
+            setupPhoneMask() {
+                this.phoneInput.addEventListener('input', (e) => {
+                    let value = e.target.value.replace(/\D/g, '');
+                    
+                    if (value.length >= 11) {
+                        value = value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+                    } else if (value.length >= 7) {
+                        value = value.replace(/(\d{2})(\d{4})(\d+)/, '($1) $2-$3');
+                    } else if (value.length >= 3) {
+                        value = value.replace(/(\d{2})(\d+)/, '($1) $2');
+                    }
+                    
+                    e.target.value = value;
+                });
+            }
+
+
+
+            setupFormValidation() {
+                const inputs = this.form.querySelectorAll('input[required]');
+                
+                inputs.forEach(input => {
+                    input.addEventListener('blur', () => this.validateField(input));
+                    input.addEventListener('input', () => {
+                        if (input.classList.contains('error')) {
+                            this.validateField(input);
+                        }
+                    });
+                });
+            }
+
+
+
+            validateField(field) {
+                const fieldName = field.name;
+                const value = field.value.trim();
+                const errorElement = document.getElementById(`${fieldName}Error`);
+                
+                let isValid = true;
+                let errorMessage = '';
+
+
+
+                switch (fieldName) {
+                    case 'name':
+                        if (!value) {
+                            errorMessage = 'Por favor, informe seu nome completo.';
+                            isValid = false;
+                        } else if (value.length < 2) {
+                            errorMessage = 'Nome deve ter pelo menos 2 caracteres.';
+                            isValid = false;
+                        }
+                        break;
+
+
+
+                    case 'email':
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (!value) {
+                            errorMessage = 'Por favor, informe seu e-mail.';
+                            isValid = false;
+                        } else if (!emailRegex.test(value)) {
+                            errorMessage = 'Por favor, informe um e-mail válido.';
+                            isValid = false;
+                        }
+                        break;
+
+
+
+                    case 'phone':
+                        const phoneRegex = /^\(\d{2}\)\s\d{4,5}-\d{4}$/;
+                        if (!value) {
+                            errorMessage = 'Por favor, informe seu WhatsApp.';
+                            isValid = false;
+                        } else if (!phoneRegex.test(value)) {
+                            errorMessage = 'Por favor, informe um número válido.';
+                            isValid = false;
+                        }
+                        break;
+                }
+
+
+
+                // Update field appearance
+                if (isValid) {
+                    field.classList.remove('error');
+                    field.classList.add('success');
+                    if (errorElement) {
+                        errorElement.classList.remove('show');
+                    }
+                } else {
+                    field.classList.remove('success');
+                    field.classList.add('error');
+                    if (errorElement) {
+                        errorElement.textContent = errorMessage;
+                        errorElement.classList.add('show');
+                    }
+                }
+
+
+
+                return isValid;
+            }
+
+
+
+            setupFormSubmission() {
+                this.form.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    
+                    // Validate all required fields
+                    const requiredInputs = this.form.querySelectorAll('input[required]');
+                    let isFormValid = true;
+                    
+                    requiredInputs.forEach(input => {
+                        if (!this.validateField(input)) {
+                            isFormValid = false;
+                        }
+                    });
+
+
+
+                    if (!isFormValid) {
+                        // Scroll to first error field
+                        const firstError = this.form.querySelector('.error');
+                        if (firstError) {
+                            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            firstError.focus();
+                        }
+                        return;
+                    }
+
+
+
+                    // Show loading state
+                    this.setLoadingState(true);
+
+
+
+                    try {
+                        // Simulate form submission (replace with actual endpoint)
+                        await this.submitForm();
+                        this.showSuccessMessage();
+                    } catch (error) {
+                        console.error('Form submission error:', error);
+                        this.showErrorMessage('Ocorreu um erro ao enviar sua mensagem. Tente novamente ou entre em contato via WhatsApp.');
+                    } finally {
+                        this.setLoadingState(false);
+                    }
+                });
+            }
+
+
+
+            async submitForm() {
+                const formData = new FormData(this.form);
+                const data = Object.fromEntries(formData);
+                
+                // Create WhatsApp message
+                const whatsappMessage = this.createWhatsAppMessage(data);
+                
+                // Redirect to WhatsApp (you can also integrate with a backend here)
+                window.open(`https://wa.me/5577998000736?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
+                
+                // Simulate API call delay
+                return new Promise(resolve => setTimeout(resolve, 1000));
+            }
+
+
+
+            createWhatsAppMessage(data) {
+                let message = `*Nova mensagem do site - TS Estética*\n\n`;
+                message += `*Nome:* ${data.name}\n`;
+                message += `*E-mail:* ${data.email}\n`;
+                message += `*WhatsApp:* ${data.phone}\n`;
+                
+                if (data.service) {
+                    const serviceNames = {
+                        'vitaminas': 'Reposição Vitamínica Injetável',
+                        'limpeza': 'Limpeza de Pele Profunda',
+                        'detox': 'Protocolo Detox da Pele',
+                        'microagulhamento': 'Microagulhamento',
+                        'skinbooster': 'Skinbooster',
+                        'capilar': 'Tratamento Capilar',     // adicionado
+                        'botox': 'Botox Facial',             // adicionado
+                        'completo': 'Tratamento Completo',
+                        'consulta': 'Consulta de Avaliação'
+                    };
+                    message += `*Serviço de Interesse:* ${serviceNames[data.service] || data.service}\n`;
+                }
+                
+                if (data.message) {
+                    message += `\n*Mensagem:*\n${data.message}`;
+                }
+                
+                return message;
+            }
+
+
+
+            setLoadingState(loading) {
+                if (loading) {
+                    this.submitBtn.disabled = true;
+                    this.submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" aria-hidden="true"></i> Enviando...';
+                    this.submitBtn.classList.add('loading');
+                } else {
+                    this.submitBtn.disabled = false;
+                    this.submitBtn.innerHTML = '<i class="fas fa-paper-plane" aria-hidden="true"></i> Enviar Mensagem';
+                    this.submitBtn.classList.remove('loading');
+                }
+            }
+
+
+
+            showSuccessMessage() {
+                // Create success message element
+                const successMessage = document.createElement('div');
+                successMessage.className = 'success-notification';
+                successMessage.innerHTML = `
+                    <div class="notification-content">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Mensagem enviada com sucesso!</h4>
+                            <p>Você será redirecionada para o WhatsApp. Responderemos em breve!</p>
+                        </div>
+                    </div>
+                `;
+                
+                // Add styles for success notification
+                successMessage.style.cssText = `
+                    position: fixed;
+                    top: 100px;
+                    right: 20px;
+                    background: linear-gradient(135deg, #10b981, #059669);
+                    color: white;
+                    padding: 1rem;
+                    border-radius: 12px;
+                    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+                    z-index: 1000;
+                    animation: slideInRight 0.5s ease-out;
+                `;
+                
+                document.body.appendChild(successMessage);
+                
+                // Remove notification after 5 seconds
+                setTimeout(() => {
+                    successMessage.style.animation = 'slideOutRight 0.5s ease-in';
+                    setTimeout(() => {
+                        document.body.removeChild(successMessage);
+                    }, 500);
+                }, 5000);
+
+
+
+                // Reset form
+                this.form.reset();
+                this.form.querySelectorAll('.success, .error').forEach(field => {
+                    field.classList.remove('success', 'error');
+                });
+                this.form.querySelectorAll('.error-message.show').forEach(error => {
+                    error.classList.remove('show');
+                });
+            }
+
+
+
+            showErrorMessage(message) {
+                const errorMessage = document.createElement('div');
+                errorMessage.className = 'error-notification';
+                errorMessage.innerHTML = `
+                    <div class="notification-content">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <div>
+                            <h4>Erro ao enviar mensagem</h4>
+                            <p>${message}</p>
+                        </div>
+                    </div>
+                `;
+                
+                errorMessage.style.cssText = `
+                    position: fixed;
+                    top: 100px;
+                    right: 20px;
+                    background: linear-gradient(135deg, #ef4444, #dc2626);
+                    color: white;
+                    padding: 1rem;
+                    border-radius: 12px;
+                    box-shadow: 0 10px 25px rgba(239, 68, 68, 0.3);
+                    z-index: 1000;
+                    animation: slideInRight 0.5s ease-out;
+                `;
+                
+                document.body.appendChild(errorMessage);
+                
+                setTimeout(() => {
+                    errorMessage.style.animation = 'slideOutRight 0.5s ease-in';
+                    setTimeout(() => {
+                        document.body.removeChild(errorMessage);
+                    }, 500);
+                }, 7000);
+            }
+        }
+
+
+
+        // ===== UTILITY FUNCTIONS =====
+        class Utils {
+            static addNotificationStyles() {
+                const styles = `
+                    @keyframes slideInRight {
+                        from {
+                            transform: translateX(100%);
+                            opacity: 0;
+                        }
+                        to {
+                            transform: translateX(0);
+                            opacity: 1;
+                        }
+                    }
+                    
+                    @keyframes slideOutRight {
+                        from {
+                            transform: translateX(0);
+                            opacity: 1;
+                        }
+                        to {
+                            transform: translateX(100%);
+                            opacity: 0;
+                        }
+                    }
+                    
+                    .notification-content {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                        max-width: 300px;
+                    }
+                    
+                    .notification-content i {
+                        font-size: 1.5rem;
+                        flex-shrink: 0;
+                    }
+                    
+                    .notification-content h4 {
+                        margin: 0 0 0.5rem 0;
+                        font-size: 1rem;
+                        font-weight: 600;
+                    }
+                    
+                    .notification-content p {
+                        margin: 0;
+                        font-size: 0.875rem;
+                        opacity: 0.9;
+                        line-height: 1.4;
+                    }
+                `;
+                
+                const styleSheet = document.createElement('style');
+                styleSheet.textContent = styles;
+                document.head.appendChild(styleSheet);
+            }
+
+
+
+            static setupKeyboardNavigation() {
+                // Improve keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Tab') {
+                        document.body.classList.add('keyboard-navigation');
+                    }
+                });
+
+
+
+                document.addEventListener('mousedown', () => {
+                    document.body.classList.remove('keyboard-navigation');
+                });
+
+
+
+                // Add focus styles for keyboard navigation
+                const focusStyles = `
+                    .keyboard-navigation *:focus {
+                        outline: 2px solid var(--primary-color) !important;
+                        outline-offset: 2px !important;
+                    }
+                `;
+
+
+
+                const focusStyleSheet = document.createElement('style');
+                focusStyleSheet.textContent = focusStyles;
+                document.head.appendChild(focusStyleSheet);
+            }
+
+
+
+            static setupPerformanceOptimizations() {
+                // Lazy load images
+                if ('IntersectionObserver' in window) {
+                    const imageObserver = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                const img = entry.target;
+                                if (img.dataset.src) {
+                                    img.src = img.dataset.src;
+                                    img.classList.remove('lazy');
+                                    imageObserver.unobserve(img);
+                                }
+                            }
+                        });
+                    });
+
+
+
+                    document.querySelectorAll('img[data-src]').forEach(img => {
+                        imageObserver.observe(img);
+                    });
+                }
+
+
+
+                // Preload critical resources
+                const preloadLink = document.createElement('link');
+                preloadLink.rel = 'preload';
+                preloadLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap';
+                preloadLink.as = 'style';
+                document.head.appendChild(preloadLink);
+            }
+        }
+
+
+
+        // ===== INITIALIZATION =====
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize all components
+            new Navigation();
+            new ScrollAnimations();
+            new FormHandler();
+            
+            // Setup utilities
+            Utils.addNotificationStyles();
+            Utils.setupKeyboardNavigation();
+            Utils.setupPerformanceOptimizations();
+            
+            // Add loading complete class to body
+            setTimeout(() => {
+                document.body.classList.add('loaded');
+            }, 100);
         });
 
 
 
-        // Intersection Observer para animações
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+        // ===== PERFORMANCE MONITORING =====
+        if ('performance' in window) {
+            window.addEventListener('load', () => {
+                const loadTime = performance.now();
+                console.log(`Page loaded in ${Math.round(loadTime)}ms`);
+                
+                // Report Core Web Vitals (optional)
+                if ('web-vitals' in window) {
+                    // This would require importing the web-vitals library
+                    // getCLS(console.log);
+                    // getFID(console.log);
+                    // getLCP(console.log);
                 }
             });
-        }, observerOptions);
-        // Observar elementos para animação
-        document.querySelectorAll('.service-card, .testimonial-card, .result-card, .problem-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.6s ease';
-            observer.observe(el);
-        });
-        // Remover loading overlay
-        window.addEventListener('load', () => {
-            const loadingOverlay = document.getElementById('loadingOverlay');
-            loadingOverlay.style.opacity = '0';
-            setTimeout(() => {
-                loadingOverlay.style.display = 'none';
-            }, 500);
-        });
-        // Inicializar timers e contadores
-        document.addEventListener('DOMContentLoaded', () => {
-            startCountdown();
-            setInterval(updateSpots, 45000); // Update spots every 45 seconds
-            
-            // Track page view
-            trackEvent('Page', 'View', 'Landing_Page');
-        });
-        // Adicionar estilos CSS adicionais
-        const additionalStyles = `
-           
-        `;
+        }
 
 
 
-        // Adicionar estilos ao head
-        const style = document.createElement('style');
-        style.textContent = additionalStyles;
-        document.head.appendChild(style);
+        // ===== ERROR HANDLING =====
+        window.addEventListener('error', (e) => {
+            console.error('JavaScript error:', e.error);
+            // You could send this to an error reporting service
+        });
+
+
+
+        window.addEventListener('unhandledrejection', (e) => {
+            console.error('Unhandled promise rejection:', e.reason);
+             // You could send this to an error reporting service
+        });
     </script>
 </body>
 </html>

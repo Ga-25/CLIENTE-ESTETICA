@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento Confirmado - Thifany Sá Estética</title>
+  <meta name="description" content="Cadastro realizado com sucesso! Seu acesso ao Guia do Emagrecimento Saudável foi confirmado.">
+  <link rel="icon" type="image/svg+xml" href="logo.png">
+
+  <!-- META PIXEL -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', 'SEU_PIXEL_ID'); // Substitua pelo seu Pixel
+    fbq('track', 'PageView');
+    fbq('track', 'Purchase', {
+      content_name: 'Cadastro Concluído - Emagrecer Permanente',
+      value: 97.00,
+      currency: 'BRL'
+    });
+  </script>
+
+  <!-- FONTES E ÍCONES -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --primary-color: #8b4d4d;
+      --primary-light: #a85f5f;
+      --primary-dark: #6b3838;
+      --secondary-color: #daa5a5;
+      --secondary-light: #f4e4e4;
+      --accent-color: #c17b7b;
+      --text-dark: #4a2e2e;
+      --text-color: #3a2a2a;
+      --bg-color: #fdf8f8;
+      --card-bg: #ffffff;
+      --shadow-color: rgba(139,77,77,0.2);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+      padding: 20px;
+      position: relative;
+    }
+
+    /* Fundo suave com brilho */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle at 20% 80%, rgba(218,165,165,0.35), transparent 60%),
+                  radial-gradient(circle at 80% 20%, rgba(193,123,123,0.25), transparent 60%);
+      z-index: -1;
+      animation: softGlow 9s ease-in-out infinite alternate;
+    }
+
+    @keyframes softGlow {
+      from { opacity: 0.5; transform: scale(1); }
+      to { opacity: 0.8; transform: scale(1.05); }
+    }
+
+    .container {
+      background: var(--card-bg);
+      border-radius: 20px;
+      padding: 50px 35px;
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 10px 40px var(--shadow-color);
+      border: 1px solid rgba(139,77,77,0.1);
+      animation: fadeUp .8s ease-out;
+    }
+
+    @keyframes fadeUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .icon-success {
+      width: 100px; height: 100px;
+      background: linear-gradient(135deg, var(--primary-light), var(--secondary-color));
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 42px;
+      color: #fff;
+      margin: 0 auto 25px;
+      position: relative;
+      animation: bounceIn 1.2s ease;
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0); opacity: 0; }
+      60% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    .icon-success::after {
+      content: '';
+      position: absolute;
+      top: -8px; left: -8px; right: -8px; bottom: -8px;
+      border: 3px solid rgba(139,77,77,0.3);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%,100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: .5; }
+    }
+
+    h1 {
+      font-size: 2rem;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: var(--text-dark);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+      color: #fff;
+      font-weight: 600;
+      border-radius: 12px;
+      padding: 16px 32px;
+      font-size: 1rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all .3s ease;
+      text-transform: uppercase;
+      box-shadow: 0 6px 18px rgba(139,77,77,0.3);
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 26px rgba(139,77,77,0.4);
+    }
+
+    .btn-whatsapp i {
+      margin-right: 8px;
+    }
+
+    footer {
+      margin-top: 35px;
+      font-size: 0.9rem;
+      color: var(--primary-dark);
+    }
+
+    @media (max-width:480px){
+      .container{ padding: 35px 20px; }
+      h1{ font-size: 1.7rem; }
+      p{ font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon-success"><i class="fas fa-check"></i></div>
+    <h1>Agendamento Confirmado!</h1>
+    <p id="mensagem">Carregando informações...</p>
+
+    <a href="https://wa.me/+5577998000736?text=Olá! Acabei de concluir meu cadastro no Emagrecer Permanente e gostaria de confirmar meu acesso."
+       class="btn-whatsapp" target="_blank">
+      <i class="fab fa-whatsapp"></i> Confirmar no WhatsApp
+    </a>
+
+  </div>
+
+  <script>
+    // Confete nas cores da paleta
+    document.addEventListener('DOMContentLoaded', () => {
+      const cores = ['#8b4d4d', '#a85f5f', '#c17b7b', '#daa5a5'];
+      for (let i = 0; i < 30; i++) {
+        const c = document.createElement('div');
+        c.style.position = 'fixed';
+        c.style.top = '-10px';
+        c.style.left = Math.random() * 100 + '%';
+        c.style.width = '10px';
+        c.style.height = '10px';
+        c.style.background = cores[Math.floor(Math.random()*cores.length)];
+        c.style.borderRadius = '50%';
+        c.style.opacity = '.9';
+        c.style.zIndex = '999';
+        c.style.animation = `fall${i} 3s linear forwards`;
+        document.body.appendChild(c);
+        const keyframes = document.createElement('style');
+        keyframes.textContent = `
+          @keyframes fall${i} {
+            to {
+              transform: translateY(100vh) rotate(720deg);
+              opacity: 0;
+            }
+          }
+        `;
+        document.head.appendChild(keyframes);
+        setTimeout(()=>c.remove(),3000);
+      }
+    });
+
+     document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const nome = decodeURIComponent(params.get('nome') || '');
+    const data = decodeURIComponent(params.get('data') || '');
+    const hora = decodeURIComponent(params.get('hora') || '');
+    const interesse = decodeURIComponent(params.get('interesse') || '');
+
+    const mensagemEl = document.getElementById('mensagem');
+    const btnWhats = document.querySelector('.btn-whatsapp');
+
+    mensagemEl.innerHTML = `
+      <strong>${nome}</strong>, seu agendamento foi realizado com sucesso!<br><br>
+      Procedimento: <strong>${interesse}</strong><br>
+      Data: <strong>${data}</strong><br>
+      Hora: <strong>${hora}</strong><br><br>
+      Nossa equipe entrará em contato para confirmar os detalhes pelo WhatsApp.
+    `;
+
+    const textoWhats = encodeURIComponent(
+      `Olá! Sou ${nome} e acabei de agendar ${interesse} para o dia ${data} às ${hora}.`
+    );
+    btnWhats.href = `https://wa.me/+5577998000736?text=${textoWhats}`;
+  });
+  </script>
+</body>
+</html>

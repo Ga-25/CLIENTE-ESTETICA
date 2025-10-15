@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thifany Sá Estética Avançada - Transforme Sua Saúde e Autoestima</title>
+    <meta name="description" content="Biomédica Esteta especializada em tratamentos faciais, corporais e reposição vitamínica. Resultados comprovados em Luís Eduardo Magalhães, BA.">
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'SEU_PIXEL_ID');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+
+
+        /* Animações Avançadas */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+
+        @keyframes pulseGlow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(218, 165, 165, 0.6);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(218, 165, 165, 0.9);
+                transform: scale(1.02);
+            }
+        }
+
+
+
+        @keyframes floatAnimation {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+
+
+        /* Header */
+        .header {
+            background: linear-gradient(-45deg, #daa5a5, #f4e4e4, #e8c5c5, #f0d0d0);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #8b4d4d;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+
+
+        .cta-header {
+            background: linear-gradient(135deg, #8b4d4d, #a85f5f);
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: pulseGlow 3s infinite;
+        }
+
+
+
+        .cta-header:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(139, 77, 77, 0.3);
+        }
+
+
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(218, 165, 165, 0.1), rgba(240, 208, 208, 0.1));
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(218, 165, 165, 0.1) 0%, transparent 70%);
+            animation: floatAnimation 6s ease-in-out infinite;
+        }
+
+
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #8b4d4d, #a85f5f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease;
+        }
+
+
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #666;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+
+
+        .credentials {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1rem 2rem;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+
+
+        /* Video Section */
+        .video-section {
+            padding: 80px 0;
+            background: #f8f8f8;
+        }
+
+
+
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            animation: fadeInUp 1s ease;
+        }
+
+
+
+        .video-placeholder {
+            background: #000;
+            border-radius: 20px;
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+
+
+        .video-placeholder:hover {
+            transform: scale(1.02);
+        }
+
+
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: pulseGlow 2s infinite;
+        }
+
+
+
+        .play-button:hover {
+            transform: scale(1.1);
+        }
+
+
+
+        .play-button::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 20px solid #8b4d4d;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            margin-left: 5px;
+        }
+
+
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: white;
+        }
+
+
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+            color: #8b4d4d;
+            animation: fadeInUp 1s ease;
+        }
+
+
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+
+
+        .service-card {
+            background: linear-gradient(135deg, rgba(218, 165, 165, 0.1), rgba(240, 208, 208, 0.1));
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(218, 165, 165, 0.2);
+            animation: fadeInUp 1s ease;
+        }
+
+
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+
+
+        .service-card h3 {
+            color: #8b4d4d;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: #f8f8f8;
+        }
+
+
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            animation: fadeInUp 1s ease;
+        }
+
+
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+
+
+        .stars {
+            color: #ffd700;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #8b4d4d;
+        }
+
+
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #8b4d4d, #a85f5f);
+            color: white;
+            text-align: center;
+        }
+
+
+
+        .cta-button {
+            background: white;
+            color: #8b4d4d;
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 2rem 1rem;
+            display: inline-block;
+            text-decoration: none;
+            animation: pulseGlow 3s infinite;
+        }
+
+
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .services-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+
+        /* Elementos de Loading */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(139, 77, 77, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255,255,255,0.3);
+            border-top: 5px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+         .hero-stats {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 2rem;
+                margin: 3rem 0;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .stat-item {
+                text-align: center;
+                background: rgba(255, 255, 255, 0.9);
+                padding: 1.5rem;
+                border-radius: 15px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+            .stat-number {
+                display: block;
+                font-size: 2.5rem;
+                font-weight: 700;
+                color: #8b4d4d;
+                margin-bottom: 0.5rem;
+            }
+            .stat-label {
+                font-size: 0.9rem;
+                color: #666;
+                font-weight: 500;
+            }
+            .problem-section {
+                padding: 80px 0;
+                background: linear-gradient(135deg, rgba(255, 0, 0, 0.05), rgba(255, 100, 100, 0.05));
+            }
+
+            .problems-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+                margin: 3rem 0;
+            }
+            .problem-card {
+                background: white;
+                padding: 2rem;
+                border-radius: 20px;
+                text-align: center;
+                box-shadow: 0 10px 30px rgba(255, 0, 0, 0.1);
+                border-left: 4px solid #ff6b6b;
+                transition: transform 0.3s ease;
+            }
+
+
+
+            .problem-card:hover {
+                transform: translateY(-5px);
+            }
+
+
+
+            .problem-icon {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+
+
+
+            .revelation-box {
+                background: linear-gradient(135deg, #8b4d4d, #a85f5f);
+                color: white;
+                padding: 2rem;
+                border-radius: 20px;
+                text-align: center;
+                margin-top: 3rem;
+                box-shadow: 0 15px 35px rgba(139, 77, 77, 0.3);
+            }
+
+
+
+            .service-benefits {
+                margin-top: 1rem;
+            }
+
+
+
+            .benefit {
+                display: block;
+                margin: 0.5rem 0;
+                color: #8b4d4d;
+                font-weight: 500;
+            }
+
+
+
+            .results-section {
+                padding: 80px 0;
+                background: white;
+            }
+
+
+
+            .results-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+                margin-top: 3rem;
+            }
+
+
+
+            .result-card {
+                background: #f8f8f8;
+                padding: 2rem;
+                border-radius: 20px;
+                text-align: center;
+            }
+
+
+
+            .before-after {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+                margin-bottom: 1rem;
+            }
+
+
+
+            .image-placeholder {
+                aspect-ratio: 1;
+                background: #ddd;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 600;
+                color: #666;
+            }
+
+
+
+            .urgency-section {
+                padding: 80px 0;
+                background: linear-gradient(135deg, #ff6b6b, #ff5252);
+                color: white;
+            }
+
+
+
+            .urgency-content {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                gap: 3rem;
+                align-items: center;
+            }
+
+
+
+            .benefits-list {
+                list-style: none;
+                padding: 0;
+                margin: 2rem 0;
+            }
+
+
+
+            .benefits-list li {
+                padding: 0.5rem 0;
+                font-size: 1.1rem;
+            }
+
+
+.countdown-timer {
+                text-align: center;
+                background: rgba(255, 255, 255, 0.1);
+                padding: 2rem;
+                border-radius: 15px;
+            }
+
+
+
+            .timer {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+
+
+
+            .time-unit {
+                background: rgba(255, 255, 255, 0.9);
+                color: #8b4d4d;
+                padding: 1rem;
+                border-radius: 10px;
+                min-width: 80px;
+            }
+
+
+
+            .time-unit span {
+                display: block;
+                font-size: 2rem;
+                font-weight: 700;
+            }
+
+
+
+            .time-unit label {
+                font-size: 0.8rem;
+                text-transform: uppercase;
+            }
+
+
+
+            .faq-section {
+                padding: 80px 0;
+                background: #f8f8f8;
+            }
+
+
+
+            .faq-container {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+
+
+            .faq-item {
+                background: white;
+                margin-bottom: 1rem;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+
+
+
+            .faq-question {
+                padding: 1.5rem 2rem;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: white;
+                transition: background 0.3s ease;
+            }
+
+
+
+            .faq-question:hover {
+                background: #f8f8f8;
+            }
+
+
+
+            .faq-question h3 {
+                margin: 0;
+                color: #8b4d4d;
+                font-size: 1.1rem;
+            }
+
+
+
+            .faq-icon {
+                font-size: 1.5rem;
+                color: #8b4d4d;
+                font-weight: 700;
+                transition: transform 0.3s ease;
+            }
+
+
+
+            .faq-answer {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+
+
+
+            .faq-answer p {
+                padding: 0 2rem 1.5rem 2rem;
+                margin: 0;
+                color: #666;
+                line-height: 1.6;
+            }
+
+
+
+            .faq-item.active .faq-icon {
+                transform: rotate(180deg);
+            }
+
+
+
+            .cta-buttons {
+                display: flex;
+                gap: 1rem;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin: 2rem 0;
+            }
+
+
+
+            .cta-button.primary {
+                background: white;
+                color: #8b4d4d;
+                font-size: 1.3rem;
+                padding: 1.5rem 3rem;
+            }
+
+
+
+            .cta-button.secondary {
+                background: rgba(255, 255, 255, 0.2);
+                color: white;
+                border: 2px solid white;
+                font-size: 1.1rem;
+                padding: 1.2rem 2.5rem;
+            }
+
+
+
+            .guarantee {
+                background: rgba(255, 255, 255, 0.1);
+                padding: 2rem;
+                border-radius: 15px;
+                margin: 3rem 0;
+                text-align: center;
+            }
+
+
+
+            .contact-info {
+                margin-top: 2rem;
+                text-align: center;
+            }
+
+
+
+            .contact-info p {
+                margin: 0.5rem 0;
+                font-size: 1.1rem;
+            }
+
+
+
+            .social-links {
+                margin-top: 1rem;
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+            }
+
+
+
+            .social-links a {
+                color: white;
+                text-decoration: none;
+                font-size: 1.1rem;
+                transition: opacity 0.3s ease;
+            }
+
+
+
+            .social-links a:hover {
+                opacity: 0.8;
+            }
+
+
+
+            @media (max-width: 768px) {
+                .urgency-content {
+                    grid-template-columns: 1fr;
+                    text-align: center;
+                }
+
+
+
+                .timer {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+
+
+                .time-unit {
+                    min-width: 120px;
+                }
+
+
+
+                .cta-buttons {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+
+
+                .cta-button {
+                    width: 100%;
+                    max-width: 400px;
+                }
+            }
+
+
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+     <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+    </div>
+
+
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">TS Estética</div>
+            <button class="cta-header" onclick="scrollToCTA()">Agendar Consulta</button>
+        </nav>
+    </header>
+
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Transforme Sua Saúde e Autoestima</h1>
+            <p>Descubra como milhares de mulheres recuperaram sua energia, eliminaram a acne e conquistaram a pele dos sonhos</p>
+            
+            <div class="credentials">
+                <strong>THIFANY SÁ</strong><br>
+                Biomédica Esteta CRBM 13.892<br>
+                📍 Luís Eduardo Magalhães, BA
+            </div>
+
+
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">2.000+</span>
+                    <span class="stat-label">Pacientes Atendidas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Satisfação</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Anos Experiência</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="video-container">
+                <h2 class="section-title">Veja Como Funciona o Tratamento</h2>
+                <div class="video-placeholder" id="mainVideo">
+                    <div class="play-button"></div>
+                    <p>Clique para assistir o depoimento completo</p>
+                </div>
+                <p><strong>⚠️ ATENÇÃO:</strong> Este vídeo contém informações que podem mudar sua vida. Assista até o final.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Problem Agitation -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title">Você Se Reconhece Nestes Sintomas?</h2>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">😴</div>
+                    <h3>Fadiga Constante</h3>
+                    <p>Cansaço que não passa mesmo dormindo bem, falta de energia para atividades básicas</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🔴</div>
+                    <h3>Acne Persistente</h3>
+                    <p>Espinhas que não melhoram com produtos caros, pele oleosa e com cravos</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">😰</div>
+                    <h3>Ansiedade e Irritabilidade</h3>
+                    <p>Mudanças de humor, ansiedade sem causa aparente, dificuldade de concentração</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🤒</div>
+                    <h3>Imunidade Baixa</h3>
+                    <p>Gripes frequentes, alergias constantes, cicatrização lenta</p>
+                </div>
+            </div>
+            <div class="revelation-box">
+                <h3>A VERDADE QUE NINGUÉM TE CONTA:</h3>
+                <p>Esses sintomas NÃO são "normais" e muito menos "frescura". Na maioria das vezes, a causa é <strong>deficiência vitamínica</strong> que pode ser corrigida rapidamente.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Nossos Tratamentos Exclusivos</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💉</div>
+                    <h3>Reposição Vitamínica Injetável</h3>
+                    <p>Vitaminas B12, D3+K2, Complexo B e minerais essenciais com absorção 100% eficaz</p>
+                    <div class="service-benefits">
+                        <span class="benefit">✅ Energia em 48h</span>
+                        <span class="benefit">✅ Melhora imunidade</span>
+                        <span class="benefit">✅ Reduz ansiedade</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>Limpeza de Pele Profunda</h3>
+                    <p>Protocolo exclusivo para desobstruir poros, controlar oleosidade e prevenir acne</p>
+                    <div class="service-benefits">
+                        <span class="benefit">✅ Pele limpa e suave</span>
+                        <span class="benefit">✅ Reduz cravos</span>
+                        <span class="benefit">✅ Prepara para tratamentos</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🌿</div>
+                    <h3>Protocolo Detox da Pele</h3>
+                    <p>Tratamento completo de dentro para fora, eliminando toxinas e regenerando a pele</p>
+                    <div class="service-benefits">
+                        <span class="benefit">✅ Elimina acne</span>
+                        <span class="benefit">✅ Uniformiza tom</span>
+                        <span class="benefit">✅ Rejuvenesce</span>
+                    </div>
+                </div>
+
+
+
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Microagulhamento</h3>
+                    <p>Técnica avançada para cicatrizes de acne, linhas finas e renovação celular</p>
+                    <div class="service-benefits">
+                        <span class="benefit">✅ Reduz cicatrizes</span>
+                        <span class="benefit">✅ Estimula colágeno</span>
+                        <span class="benefit">✅ Rejuvenesce pele</span>
+                    </div>
+                </div>
+
+
+
+                <div class="service-card">
+                    <div class="service-icon">💪</div>
+                    <h3>Skinbooster</h3>
+                    <p>Hidratação profunda e revitalização celular para pele radiante</p>
+                    <div class="service-benefits">
+                        <span class="benefit">✅ Hidratação intensa</span>
+                        <span class="benefit">✅ Brilho natural</span>
+                        <span class="benefit">✅ Anti-idade</span>
+                    </div>
+                </div>
+
+
+
+                <div class="service-card">
+                    <div class="service-icon">🔥</div>
+                    <h3>Tratamento Completo</h3>
+                    <p>Combinação personalizada de todos os tratamentos para resultados máximos</p>
+                    <div class="service-benefits">
+                        <span class="benefit">✅ Resultados potencializados</span>
+                        <span class="benefit">✅ Acompanhamento total</span>
+                        <span class="benefit">✅ Transformação completa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">O Que Nossas Pacientes Dizem</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Eu estava muito mal ultimamente e não foi guerra espiritual, foi vitamina baixa! A Dra. Tiffany trabalha com segurança e responsabilidade. Minha energia voltou completamente!"</p>
+                    <div class="testimonial-author">Nicolly H. - Cliente Real</div>
+                </div>
+
+
+
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Minha pele é muito oleosa e acneica. A Dra. Tiffany me proporcionou uma pele com textura suave. Foi extremamente cuidadosa e profissional. Saí com a autoestima nas alturas!"</p>
+                    <div class="testimonial-author">Paciente Verificada</div>
+                </div>
+
+
+
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"O protocolo detox e as limpezas de pele foram cruciais para diminuir minhas espinhas. Se eu fosse você não perderia tempo e já faria também!"</p>
+                    <div class="testimonial-author">Nicolly - Influenciadora</div>
+                </div>
+
+
+
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Negligenciava coisas básicas por não entender o que estava acontecendo. A fadiga e ansiedade tinham causa interna: vitaminas baixas. A Dra. Tiffany mudou minha vida!"</p>
+                    <div class="testimonial-author">Cliente Transformada</div>
+                </div>
+
+
+
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Fiz reposição de vitamina B12 e D de forma injetável. Absorção rápida e eficiente. Mesmo as agulhas sendo temíveis, foi tão rápido que nem senti. Profissional responsável!"</p>
+                    <div class="testimonial-author">Paciente Satisfeita</div>
+                </div>
+
+
+
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Não consigo explicar o quanto minha imunidade melhorou desde que repus as vitaminas. O corpo funciona perfeitamente quando nada está disfuncional!"</p>
+                    <div class="testimonial-author">Resultado Comprovado</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Before/After Section -->
+    <section class="results-section">
+        <div class="container">
+            <h2 class="section-title">Resultados Reais de Nossas Pacientes</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-image">
+                        <div class="before-after">
+                            <div class="image-placeholder">ANTES</div>
+                            <div class="image-placeholder">DEPOIS</div>
+                        </div>
+                    </div>
+                    <h3>Tratamento de Acne</h3>
+                    <p>3 meses de protocolo detox + limpezas mensais</p>
+                </div>
+
+
+
+                <div class="result-card">
+                    <div class="result-image">
+                        <div class="before-after">
+                            <div class="image-placeholder">ANTES</div>
+                            <div class="image-placeholder">DEPOIS</div>
+                        </div>
+                    </div>
+                    <h3>Cicatrizes de Acne</h3>
+                    <p>6 sessões de microagulhamento + skinbooster</p>
+                </div>
+
+
+
+                <div class="result-card">
+                    <div class="result-image">
+                        <div class="before-after">
+                            <div class="image-placeholder">ANTES</div>
+                            <div class="image-placeholder">DEPOIS</div>
+                        </div>
+                    </div>
+                    <h3>Rejuvenescimento</h3>
+                    <p>Protocolo vitamínico + tratamentos faciais</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Urgency Section -->
+    <section class="urgency-section">
+        <div class="container">
+            <h2 class="section-title">⚠️ ATENÇÃO: Oferta Limitada!</h2>
+            <div class="urgency-content">
+                <div class="urgency-text">
+                    <h3>Apenas Hoje: 50% OFF na Primeira Consulta</h3>
+                    <p>Para as próximas <strong id="spotsLeft">7</strong> pessoas que agendarem agora:</p>
+                    <ul class="benefits-list">
+                        <li>✅ Consulta completa + Avaliação (de R$ 200 por R$ 100)</li>
+                        <li>✅ Protocolo personalizado GRÁTIS</li>
+                        <li>✅ Acompanhamento via WhatsApp por 30 dias</li>
+                        <li>✅ Garantia de satisfação ou dinheiro de volta</li>
+                    </ul>
+                </div>
+                <div class="countdown-timer">
+                    <h4>Oferta expira em:</h4>
+                    <div class="timer">
+                        <div class="time-unit">
+                            <span id="hours">23</span>
+                            <label>Horas</label>
+                        </div>
+                        <div class="time-unit">
+                            <span id="minutes">45</span>
+                            <label>Minutos</label>
+                        </div>
+                        <div class="time-unit">
+                            <span id="seconds">30</span>
+                            <label>Segundos</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>As vitaminas injetáveis são seguras?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                                                <p>Sim, completamente seguras quando aplicadas por profissional qualificado. Sou Biomédica registrada no CRBM 13.892 e utilizo apenas produtos farmacêuticos de alta qualidade. A aplicação é rápida e praticamente indolor.</p>
+                    </div>
+                </div>
+
+
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quanto tempo para ver resultados?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Para vitaminas injetáveis: energia e disposição em 24-48h. Para tratamentos de pele: melhoras visíveis em 7-15 dias, resultados completos em 2-3 meses com protocolo adequado.</p>
+                    </div>
+                </div>
+
+
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>É necessário fazer exames antes?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Recomendo exames para identificar deficiências específicas, mas posso solicitar os exames necessários durante a consulta. Trabalho sempre com segurança e responsabilidade.</p>
+                    </div>
+                </div>
+
+
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Os tratamentos são dolorosos?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sou extremamente cuidadosa e humanizada. Utilizo técnicas para minimizar desconforto. As aplicações são rápidas e a maioria das pacientes relatam que "nem sentiram".</p>
+                    </div>
+                </div>
+
+
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Qual a frequência dos tratamentos?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Vitaminas: conforme necessidade individual (semanal/quinzenal). Limpeza de pele: mensal. Microagulhamento: 15-30 dias entre sessões. Tudo personalizado para seu caso.</p>
+                    </div>
+                </div>
+
+
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Atende apenas mulheres cristãs?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Atendo todas as pessoas que desejam cuidar da saúde e autoestima. Acredito que cuidar do corpo é cuidar do que Deus nos deu, independente da religião.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="ctaSection">
+        <div class="container">
+            <h2>🚀 Pronta Para Sua Transformação?</h2>
+            <p>Não deixe para amanhã o que pode mudar sua vida hoje!</p>
+            
+            <div class="cta-buttons">
+                <a href="cadastro.html" class="cta-button primary" onclick="trackEvent('LeadMagnet', 'Click', 'Main_CTA')">
+                    💬 Quero Minha Consulta 50% OFF
+                </a>
+                <a href="https://wa.me/5577998000736?text=Olá! Vi sua página e gostaria de agendar minha consulta com 50% de desconto!" class="cta-button secondary" target="_blank">
+                    📱 Chamar no WhatsApp
+                </a>
+            </div>
+
+
+
+            <div class="guarantee">
+                <h3>🛡️ GARANTIA TOTAL</h3>
+                <p>Se não ficar satisfeita em 30 dias, devolvemos 100% do seu dinheiro!</p>
+            </div>
+
+
+
+            <div class="contact-info">
+                <p>📍 <strong>Endereço:</strong> Luís Eduardo Magalhães, BA</p>
+                <p>📞 <strong>Telefone:</strong> (77) 99800-0736</p>
+                <p>⏰ <strong>Horário:</strong> Seg-Sex 8h às 18h | Sáb 8h às 12h</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Thifany Sá Estética Avançada. Todos os direitos reservados.</p>
+            <p>CRBM 13.892 | Biomédica Esteta</p>
+            <div class="social-links">
+                <a href="https://instagram.com/drathifanysa" target="_blank">📱 Instagram</a>
+                <a href="https://wa.me/5577998000736" target="_blank">💬 WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        // Tracking de eventos
+        function trackEvent(category, action, label) {
+            // Facebook Pixel
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {
+                    content_category: category,
+                    content_name: label
+                });
+            }
+            
+            // Google Analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', action, {
+                    event_category: category,
+                    event_label: label
+                });
+            }
+
+
+
+            // Envio para API customizada
+            fetch('/event', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    event_name: 'Lead',
+                    custom_data: {
+                        category: category,
+                        action: action,
+                        label: label
+                    },
+                    user: {
+                        fbp: getCookie('_fbp'),
+                        fbc: getCookie('_fbc')
+                    }
+                })
+            }).catch(err => console.log('Tracking error:', err));
+        }
+
+
+
+        // Função para pegar cookies
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+
+
+        // Countdown Timer
+        function startCountdown() {
+            const countdown = setInterval(function() {
+                const hours = document.getElementById('hours');
+                const minutes = document.getElementById('minutes');
+                const seconds = document.getElementById('seconds');
+                
+                let h = parseInt(hours.textContent);
+                let m = parseInt(minutes.textContent);
+                let s = parseInt(seconds.textContent);
+
+
+
+                if (s > 0) {
+                    s--;
+                } else if (m > 0) {
+                    m--;
+                    s = 59;
+                } else if (h > 0) {
+                    h--;
+                    m = 59;
+                    s = 59;
+                } else {
+                    clearInterval(countdown);
+                    return;
+                }
+
+
+
+                hours.textContent = h.toString().padStart(2, '0');
+                minutes.textContent = m.toString().padStart(2, '0');
+                seconds.textContent = s.toString().padStart(2, '0');
+            }, 1000);
+        }
+
+
+
+        // Spots counter
+        function updateSpots() {
+            const spotsElement = document.getElementById('spotsLeft');
+            const currentSpots = parseInt(spotsElement.textContent);
+            
+            if (currentSpots > 1) {
+                const randomDecrease = Math.random() < 0.3; // 30% chance
+                if (randomDecrease) {
+                    spotsElement.textContent = currentSpots - 1;
+                }
+            }
+        }
+
+
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                const icon = question.querySelector('.faq-icon');
+                
+                faqItem.classList.toggle('active');
+                
+                if (faqItem.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.textContent = '-';
+                } else {
+                    answer.style.maxHeight = '0';
+                    icon.textContent = '+';
+                }
+            });
+        });
+
+
+
+        // Smooth scroll
+        function scrollToCTA() {
+            document.getElementById('ctaSection').scrollIntoView({
+                behavior: 'smooth'
+            });
+            trackEvent('Navigation', 'Scroll', 'Header_CTA');
+        }
+
+
+
+        // Video click tracking
+        document.getElementById('mainVideo').addEventListener('click', function() {
+            trackEvent('Video', 'Play', 'Main_Video');
+            // Aqui você pode adicionar o código para reproduzir o vídeo real
+            alert('Vídeo será carregado aqui. Integre com YouTube, Vimeo ou player personalizado.');
+        });
+
+
+
+        // Intersection Observer para animações
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        // Observar elementos para animação
+        document.querySelectorAll('.service-card, .testimonial-card, .result-card, .problem-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+        // Remover loading overlay
+        window.addEventListener('load', () => {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            loadingOverlay.style.opacity = '0';
+            setTimeout(() => {
+                loadingOverlay.style.display = 'none';
+            }, 500);
+        });
+        // Inicializar timers e contadores
+        document.addEventListener('DOMContentLoaded', () => {
+            startCountdown();
+            setInterval(updateSpots, 45000); // Update spots every 45 seconds
+            
+            // Track page view
+            trackEvent('Page', 'View', 'Landing_Page');
+        });
+        // Adicionar estilos CSS adicionais
+        const additionalStyles = `
+           
+        `;
+
+
+
+        // Adicionar estilos ao head
+        const style = document.createElement('style');
+        style.textContent = additionalStyles;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

@@ -25,6 +25,27 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1912860145946560');
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1912860145946560&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel Code -->
+
+
 
 
     <style>
@@ -4090,5 +4111,43 @@ document.addEventListener('DOMContentLoaded', () => {
              // You could send this to an error reporting service
         });
     </script>
+
+    <!-- Pixel Lead Tracking -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    function sendLeadEvent(label = 'Lead - Site Thifany') {
+        if (typeof fbq !== 'undefined') {
+        const eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).slice(2, 9);
+        fbq('track', 'Lead', { content_name: label }, { eventID: eventId });
+        console.log('Lead enviado:', label, eventId);
+        } else {
+        console.warn('fbq não encontrado — Pixel não carregado');
+        }
+    }
+
+    // --- Botão principal "Agendar Consulta" no header ---
+    document.querySelectorAll('.nav-cta').forEach(btn => {
+        btn.addEventListener('click', () => sendLeadEvent('Header - Agendar Consulta'));
+    });
+
+    // --- Botão "Agendar Consulta" do hero ---
+    document.querySelectorAll('.btn-primary').forEach(btn => {
+        btn.addEventListener('click', () => sendLeadEvent('Hero - Agendar Consulta'));
+    });
+
+    // --- Botão de WhatsApp no hero ---
+    document.querySelectorAll('.btn-secondary').forEach(btn => {
+        btn.addEventListener('click', () => sendLeadEvent('Hero - WhatsApp CTA'));
+    });
+
+    // --- Botão "Enviar Mensagem" do formulário de contato ---
+    const formBtn = document.getElementById('submitBtn');
+    if (formBtn) {
+        formBtn.addEventListener('click', () => sendLeadEvent('Formulário - Enviar Mensagem'));
+    }
+    });
+    </script>
+    <!-- End Pixel Lead Tracking -->
+
 </body>
 </html>

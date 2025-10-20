@@ -1,0 +1,10 @@
+{
+  "rewrites": [
+    { "source": "/cadastro", "destination": "/cadastro.html" },
+    { "source": "/obrigado", "destination": "/obrigado.html" }
+  ],
+  "redirects": [
+    { "source": "/cadastro.html", "destination": "/cadastro", "permanent": true },
+    { "source": "/obrigado.html", "destination": "/obrigado", "permanent": true }
+  ]
+}

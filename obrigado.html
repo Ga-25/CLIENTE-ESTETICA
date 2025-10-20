@@ -7,25 +7,25 @@
   <meta name="description" content="Cadastro realizado com sucesso! Seu acesso ao Guia do Emagrecimento Saudável foi confirmado.">
   <link rel="icon" type="image/svg+xml" href="logo.png">
 
-  <!-- META PIXEL -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+<!-- Meta Pixel + Purchase -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 
-    fbq('init', 'SEU_PIXEL_ID'); // Substitua pelo seu Pixel
-    fbq('track', 'PageView');
-    fbq('track', 'Purchase', {
-      content_name: 'Cadastro Concluído - Emagrecer Permanente',
-      value: 97.00,
-      currency: 'BRL'
-    });
-  </script>
+fbq('init', '1912860145946560'); // <-- seu Pixel real
+fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1912860145946560&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel -->
 
   <!-- FONTES E ÍCONES -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -248,5 +248,59 @@
     btnWhats.href = `https://wa.me/+5577998000736?text=${textoWhats}`;
   });
   </script>
+
+  <!-- Pixel + CAPI: Purchase -->
+<script>
+document.addEventListener('DOMContentLoaded', async function () {
+  const endpoint = 'https://SEU_PROJETO_RENDER.onrender.com/event'; // 🔁 substitua pela URL da sua API Render
+  const eventId = 'purchase_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8);
+
+  // Pegar os parâmetros da URL (enviados pelo cadastro.html)
+  const params = new URLSearchParams(window.location.search);
+  const nome = decodeURIComponent(params.get('nome') || '');
+  const interesse = decodeURIComponent(params.get('interesse') || '');
+  const data = decodeURIComponent(params.get('data') || '');
+  const hora = decodeURIComponent(params.get('hora') || '');
+
+  // 🔹 Dispara o evento Pixel (client-side)
+  fbq('track', 'Purchase', {
+    content_name: interesse || 'Agendamento Estética',
+    value: 97.00,
+    currency: 'BRL'
+  }, { eventID: eventId });
+
+  // 🔹 Envia também para o servidor (CAPI)
+  const userData = {
+    name: nome || '',
+  };
+  const customData = {
+    content_name: interesse || 'Agendamento Confirmado',
+    value: 1.00,
+    currency: 'BRL',
+    status: 'confirmed',
+    booking_date: data,
+    booking_time: hora
+  };
+
+  try {
+    const res = await fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        event_name: "Purchase",
+        event_source_url: window.location.href,
+        user: userData,
+        custom_data: customData
+      })
+    });
+    const json = await res.json();
+    console.log("CAPI Purchase enviado:", json);
+  } catch (err) {
+    console.warn("Erro ao enviar Purchase via CAPI:", err);
+  }
+});
+</script>
+<!-- End Pixel + CAPI: Purchase -->
+
 </body>
 </html>

@@ -1405,7 +1405,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('cadastroForm');
-  const endpoint = 'https://SEU_PROJETO_RENDER.onrender.com/event'; // 🔁 coloque aqui sua URL da API Render
+  const endpoint = 'https://capi-api-estetica.onrender.com/event'; // 🔁 coloque aqui sua URL da API Render
 
   function sha256(str) {
     const buffer = new TextEncoder().encode(str);
@@ -1477,7 +1477,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <!-- CAPI: InitiateCheckout -->
 <script>
 document.addEventListener('DOMContentLoaded', async function () {
-  const endpoint = 'https://SEU_PROJETO_RENDER.onrender.com/event'; // altere para o seu endpoint CAPI
+  const endpoint = 'https://capi-api-estetica.onrender.com/event'; // altere para o seu endpoint CAPI
   const eventId = 'initcheckout_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8);
 
   // Envia o evento para o servidor (CAPI)

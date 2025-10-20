@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agende Sua Consulta - Thifany Sá Estética Avançada</title>
     <meta name="description" content="Complete seu cadastro para agendar sua consulta com desconto especial. Biomédica Esteta CRBM 13.892.">
-    
-    <!-- Facebook Pixel -->
+        
+    <!-- Meta Pixel + InitiateCheckout -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -16,26 +16,23 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'SEU_PIXEL_ID');
+
+    fbq('init', '1912860145946560'); // <-- seu Pixel ID real
     fbq('track', 'PageView');
+
+    // Dispara automaticamente o evento de início de cadastro
     fbq('track', 'InitiateCheckout', {
-        content_name: 'Consulta Estética',
-        content_category: 'Healthcare',
-        value: 100,
-        currency: 'BRL'
+    content_name: 'Formulário de Agendamento',
+    content_category: 'Estética Avançada',
+    value: 0,
+    currency: 'BRL'
     });
     </script>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="logo.png">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1912860145946560&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel -->
 
 
 
@@ -1402,5 +1399,112 @@
             });
         }
     </script>
+
+    <!-- Pixel + CAPI: CompleteRegistration -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('cadastroForm');
+  const endpoint = 'https://SEU_PROJETO_RENDER.onrender.com/event'; // 🔁 coloque aqui sua URL da API Render
+
+  function sha256(str) {
+    const buffer = new TextEncoder().encode(str);
+    return crypto.subtle.digest('SHA-256', buffer).then(hash => {
+      return Array.from(new Uint8Array(hash))
+        .map(b => b.toString(16).padStart(2, '0'))
+        .join('');
+    });
+  }
+
+  async function sendToServer(eventName, userData = {}, customData = {}) {
+    const payload = {
+      event_name: eventName,
+      event_source_url: window.location.href,
+      user: userData,
+      custom_data: customData
+    };
+    try {
+      const res = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      const json = await res.json();
+      console.log("CAPI enviado:", json);
+    } catch (err) {
+      console.warn("Erro ao enviar CAPI:", err);
+    }
+  }
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim().toLowerCase();
+    const phone = document.getElementById('whatsapp').value.replace(/\D/g, '');
+    const interesse = document.getElementById('interesse').value;
+    const eventId = 'complete_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8);
+
+    // 1️⃣ Dispara Pixel event
+    fbq('track', 'CompleteRegistration', {
+      content_name: interesse || 'Cadastro Estética',
+      value: 0,
+      currency: 'BRL'
+    }, { eventID: eventId });
+
+    // 2️⃣ Envia para API (CAPI)
+    const userData = {
+      name: nome,
+      email: email,
+      phone: phone
+    };
+    const customData = {
+      content_name: interesse,
+      value: 0,
+      currency: 'BRL'
+    };
+    await sendToServer('CompleteRegistration', userData, customData);
+
+    // 3️⃣ Redireciona (mantém lógica original)
+    const data = encodeURIComponent(document.getElementById('dataAgendamento').value);
+    const hora = encodeURIComponent(document.getElementById('horaAgendamento').value);
+    window.location.href = `obrigado.html?nome=${encodeURIComponent(nome)}&data=${data}&hora=${hora}&interesse=${encodeURIComponent(interesse)}`;
+  });
+});
+</script>
+<!-- End Pixel + CAPI: CompleteRegistration -->
+
+<!-- CAPI: InitiateCheckout -->
+<script>
+document.addEventListener('DOMContentLoaded', async function () {
+  const endpoint = 'https://SEU_PROJETO_RENDER.onrender.com/event'; // altere para o seu endpoint CAPI
+  const eventId = 'initcheckout_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8);
+
+  // Envia o evento para o servidor (CAPI)
+  const payload = {
+    event_name: 'InitiateCheckout',
+    event_source_url: window.location.href,
+    user: {}, // usuário ainda não preencheu o form, então deixamos vazio
+    custom_data: {
+      content_name: 'Formulário de Agendamento',
+      content_category: 'Estética Avançada',
+      value: 0,
+      currency: 'BRL'
+    }
+  };
+
+  try {
+    const res = await fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+    const json = await res.json();
+    console.log("CAPI InitiateCheckout enviado:", json);
+  } catch (err) {
+    console.warn("Erro ao enviar InitiateCheckout CAPI:", err);
+  }
+});
+</script>
+<!-- End CAPI: InitiateCheckout -->
 </body>
 </html>

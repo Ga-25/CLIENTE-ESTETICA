@@ -4150,5 +4150,52 @@ document.addEventListener('DOMContentLoaded', () => {
     </script>
     <!-- End Pixel Lead Tracking -->
 
+    <!-- Envio Lead + PageView via API -->
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  const endpoint = 'https://capi-api-estetica.onrender.com/event';
+  const event_id = 'lead-' + Date.now();
+
+  // Envia PageView para CAPI
+  try {
+    await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        event_name: 'PageView',
+        event_id: event_id,
+        event_time: Math.floor(Date.now() / 1000),
+        action_source: 'website',
+        event_source_url: window.location.href
+      })
+    });
+    console.log('✅ PageView enviado via CAPI');
+  } catch (err) {
+    console.error('Erro ao enviar PageView via CAPI', err);
+  }
+
+  // Dispara também Lead (igual o Streamforce)
+  try {
+    fbq('track', 'Lead', { event_id: event_id });
+
+    await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        event_name: 'Lead',
+        event_id: event_id,
+        event_time: Math.floor(Date.now() / 1000),
+        action_source: 'website',
+        event_source_url: window.location.href
+      })
+    });
+    console.log('✅ Lead enviado via CAPI');
+  } catch (err) {
+    console.error('Erro ao enviar Lead via CAPI', err);
+  }
+});
+</script>
+
+
 </body>
 </html>
